@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd /home/ubuntu/obsidian-vault
+cd /home/ubuntu/sajib-obsidian-vault
 
 # Check if there are changes
 if [[ -n "$(git status --porcelain)" ]]; then
