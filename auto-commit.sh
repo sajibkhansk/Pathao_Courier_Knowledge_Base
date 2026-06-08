@@ -3,14 +3,18 @@ set -euo pipefail
 
 cd /home/ubuntu/sajib-obsidian-vault
 
-# Check if there are changes
+# 1. Pull changes from GitHub first to stay updated with your Mac edits
+if git remote | grep -q 'origin'; then
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git pull origin "$BRANCH" --rebase || echo "Git pull failed, remote might be unreachable."
+fi
+
+# 2. Commit and push any new files written by the Agent on the VM
 if [[ -n "$(git status --porcelain)" ]]; then
   git add .
   git commit -m "Auto-commit: Hermes analysis updates"
   
-  # Check if remote origin is configured
   if git remote | grep -q 'origin'; then
-    # Try to push to master or current branch
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
     git push origin "$BRANCH" || echo "Git push failed, remote might be unreachable."
   else
