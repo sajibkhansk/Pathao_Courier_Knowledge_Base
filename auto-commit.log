@@ -155,3 +155,10 @@ error: Please commit or stash them.
 Git pull failed, remote might be unreachable.
 To github.com:sajibkhansk/sajib-obsidian-vault.git
    90c4c19..497a2b6  master -> master
+[master 7863c58] Auto-commit: Hermes analysis updates
+ 1 file changed, 7 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Git pull failed, remote might be unreachable.
+To github.com:sajibkhansk/sajib-obsidian-vault.git
+   497a2b6..7863c58  master -> master
