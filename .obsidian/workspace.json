@@ -1,0 +1,205 @@
+{
+  "main": {
+    "id": "1646fb6b581cfab5",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c6fe90c748bdddd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b968d1f6124ba475",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05-HERMES-OUTPUTS/analyses/hello-world.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "hello-world"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4fa2e1a2712047ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "22091ed45d6aad3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30dca11fe99075fe",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "4ca02b6dd203403a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "93df1793630f5266",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "17799504bef1dc2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e680d173068ee6ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eec443dd489682dd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "06-SYSTEM/semantic-layer/glossary.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for glossary"
+            }
+          },
+          {
+            "id": "cd735c94ef2b2071",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "06-SYSTEM/semantic-layer/glossary.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from glossary"
+            }
+          },
+          {
+            "id": "84d02ad4259b32cb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0c584cdae86f75de",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "fd6a8ef0b980e901",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "06-SYSTEM/semantic-layer/glossary.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of glossary"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "30dca11fe99075fe",
+  "lastOpenFiles": [
+    "06-SYSTEM/semantic-layer/tables",
+    "06-SYSTEM/semantic-layer/metrics",
+    "05-HERMES-OUTPUTS/research",
+    "05-HERMES-OUTPUTS/briefings",
+    "05-HERMES-OUTPUTS/anomalies",
+    "02-PROJECTS",
+    "06-SYSTEM/semantic-layer/glossary.md",
+    "05-HERMES-OUTPUTS/analyses/hello-world.md",
+    "05-HERMES-OUTPUTS/analyses",
+    "05-HERMES-OUTPUTS",
+    "06-SYSTEM/templates/new-metric-template.md",
+    "06-SYSTEM/query-standards.md",
+    "06-SYSTEM/feedback-log.md",
+    "06-SYSTEM/CLAUDE.md",
+    "06-SYSTEM/semantic-layer/relationships.md"
+  ]
+}
