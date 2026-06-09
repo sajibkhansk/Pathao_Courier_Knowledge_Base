@@ -3,8 +3,9 @@
 Use these standard join paths to combine tables in `courier_realtime_datastream` (BigQuery):
 
 ## 1. Orders and Merchants
-- `public_orders` joins `public_merchants` on:
-  `public_orders.merchant_id = public_merchants.merchant_id`
+- Dashboard 31 and Datastream SQL observed join `public_orders` to `public_merchants` on:
+  `public_orders.merchant_id = public_merchants.id`
+- Note: `public_merchants.merchant_id` exists as a string/external identifier; do not use it for order joins unless a process explicitly documents that relationship.
 
 ## 2. Order Transfer Status Mapping
 - To group transfer statuses and get descriptions:
