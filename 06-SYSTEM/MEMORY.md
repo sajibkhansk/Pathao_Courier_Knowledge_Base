@@ -9,3 +9,5 @@ User prefers diagram deliverables to be visible/shareable in-chat (e.g., as an E
 WhatsApp group 120363420937837946 is labeled [Pathao] Courier ~ Data.
 §
 User's WhatsApp bridge has three connected groups; the home channel is Sajib Khan.
+§
+For Pathao Obsidian system-vault work, the user permits contextwise updates to `06-SYSTEM/` when the needed change is clear; ambiguous metric/schema/business logic should still be clarified with the user first.
