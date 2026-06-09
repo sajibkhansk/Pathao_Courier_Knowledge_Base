@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-SYSTEM/CLAUDE.md",
+                "file": "06-SYSTEM/semantic-layer/tables/public_merchants.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "public_merchants"
             }
           }
         ]
@@ -184,17 +184,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b968d1f6124ba475",
+  "active": "30dca11fe99075fe",
   "lastOpenFiles": [
-    "06-SYSTEM/query-standards.md",
-    "06-SYSTEM/CLAUDE.md",
-    "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
+    "06-SYSTEM/semantic-layer/tables/public_orders.md",
     "06-SYSTEM/semantic-layer/tables/public_merchants.md",
-    "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
     "06-SYSTEM/semantic-layer/tables/public_archived_orders.md",
     "06-SYSTEM/semantic-layer/tables/business_team_targets.md",
+    "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
+    "06-SYSTEM/semantic-layer/metrics/sorting_volume.md",
+    "06-SYSTEM/semantic-layer/metrics/open_orders.md",
+    "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md",
+    "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
+    "06-SYSTEM/CLAUDE.md",
+    "06-SYSTEM/query-standards.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/proposed-system-vault-updates.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/dashboard-31-raw.json",
@@ -207,12 +211,8 @@
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-314-Churn-Back-Merchants-Order.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-313-First-Trip-Merchants-Revenue.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-312-First-Trip-Merchants-Count.sql",
-    "06-SYSTEM/semantic-layer/tables/public_orders.md",
     "06-SYSTEM/semantic-layer/glossary.md",
     "06-SYSTEM/semantic-layer/relationships.md",
-    "06-SYSTEM/semantic-layer/metrics/sorting_volume.md",
-    "06-SYSTEM/semantic-layer/metrics/open_orders.md",
-    "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
     "06-SYSTEM/feedback-log.md",
     "06-SYSTEM/MEMORY.md",
     "06-SYSTEM/USER.md",

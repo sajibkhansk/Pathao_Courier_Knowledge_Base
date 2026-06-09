@@ -24,6 +24,5 @@ When explicitly commanded to update the system layer based on a provided resourc
 
 ## SQL Style & Standards
 - Exclude test merchants: `merchant_id NOT IN (1, 2, 99)`.
-- Defualt time zone Use timezone `Asia/Dhaka` for business date context.
-- Use `is_full_delivery = true` to count true completed deliveries.
-- Apply `updated_at` or `created_at` partition filters for BigQuery tables.
+- Use UTC as the default time zone. If someone explicitly requests it, convert the time to the Dhaka time zone
+- Apply `updated_at` mainly if not available then `created_at` partition filters for BigQuery tables.
