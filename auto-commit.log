@@ -635,3 +635,10 @@ From github.com:sajibkhansk/sajib-obsidian-vault
  * branch            master     -> FETCH_HEAD
 Already up to date.
 Everything up-to-date
+[master 886e955] Auto-commit: Hermes analysis updates
+ 1 file changed, 4 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Git pull failed, remote might be unreachable.
+To github.com:sajibkhansk/sajib-obsidian-vault.git
+   4e7378f..886e955  master -> master
