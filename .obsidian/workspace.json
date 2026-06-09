@@ -184,17 +184,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "30dca11fe99075fe",
+  "active": "b968d1f6124ba475",
   "lastOpenFiles": [
-    "06-SYSTEM/semantic-layer/tables/public_orders.md",
+    "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
+    "06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md",
     "06-SYSTEM/semantic-layer/tables/public_merchants.md",
+    "06-SYSTEM/semantic-layer/tables/public_orders.md",
     "06-SYSTEM/semantic-layer/tables/public_archived_orders.md",
     "06-SYSTEM/semantic-layer/tables/business_team_targets.md",
     "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
     "06-SYSTEM/semantic-layer/metrics/sorting_volume.md",
     "06-SYSTEM/semantic-layer/metrics/open_orders.md",
-    "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
-    "06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
     "06-SYSTEM/CLAUDE.md",
