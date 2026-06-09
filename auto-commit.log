@@ -477,3 +477,17 @@ error: Please commit or stash them.
 Git pull failed, remote might be unreachable.
 To github.com:sajibkhansk/sajib-obsidian-vault.git
    1415f98..9b8a237  master -> master
+[master b33020f] Auto-commit: Hermes analysis updates
+ 1 file changed, 7 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Git pull failed, remote might be unreachable.
+To github.com:sajibkhansk/sajib-obsidian-vault.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'github.com:sajibkhansk/sajib-obsidian-vault.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Git push failed, remote might be unreachable.
