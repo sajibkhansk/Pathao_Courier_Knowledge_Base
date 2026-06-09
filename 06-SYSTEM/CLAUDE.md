@@ -17,7 +17,7 @@ When the user provides a resource (schema dump, SQL code, documentation) or requ
 1. **Analyze**: Read the resource and identify key tables, KPIs, definitions, or gotchas.
 2. **Draft & Ask**:
    - Present a concise draft of the new memory or semantic-layer entry.
-   - Ask the user 1 or 2 specific clarifying questions (e.g., about timezone filters, exclusions, or business contexts).
+   - Ask the user 1 or 2 specific clarifying questions (e.g., timezone filters, exclusions, or business contexts).
 3. **Wait**: Do not write/create the file yet. Wait for the user to approve the draft and answer your questions in the chat.
 4. **Write**: After user approval, use your filesystem tools to save the final note to the appropriate location inside `06-SYSTEM/semantic-layer/` (or `06-SYSTEM/feedback-log.md` for general corrections).
 
