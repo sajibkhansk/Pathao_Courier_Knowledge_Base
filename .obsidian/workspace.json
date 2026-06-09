@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
+                "file": "06-SYSTEM/CLAUDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "business_team_forecasting"
+              "title": "CLAUDE"
             }
           }
         ]
@@ -186,13 +186,13 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
     "06-SYSTEM/semantic-layer/tables/public_merchants.md",
     "06-SYSTEM/semantic-layer/tables/business_team_targets.md",
     "06-SYSTEM/semantic-layer/tables/public_archived_orders.md",
     "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md",
-    "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
     "06-SYSTEM/CLAUDE.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
     "06-SYSTEM/semantic-layer/tables/public_orders.md",
