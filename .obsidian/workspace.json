@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-SYSTEM/CLAUDE.md",
+                "file": "06-SYSTEM/semantic-layer/tables/public_orders.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "public_orders"
             }
           }
         ]
@@ -186,13 +186,13 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
-    "06-SYSTEM/semantic-layer/tables/public_orders.md",
     "06-SYSTEM/semantic-layer/tables/public_merchants.md",
+    "06-SYSTEM/semantic-layer/tables/public_orders.md",
+    "06-SYSTEM/CLAUDE.md",
     "06-SYSTEM/semantic-layer/metrics/sorting_volume.md",
     "06-SYSTEM/semantic-layer/metrics/open_orders.md",
     "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
     "06-SYSTEM/feedback-log.md",
-    "06-SYSTEM/CLAUDE.md",
     "06-SYSTEM/query-standards.md",
     "06-SYSTEM/MEMORY.md",
     "06-SYSTEM/USER.md",
