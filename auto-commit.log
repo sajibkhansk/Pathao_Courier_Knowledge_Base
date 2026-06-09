@@ -642,3 +642,65 @@ error: Please commit or stash them.
 Git pull failed, remote might be unreachable.
 To github.com:sajibkhansk/sajib-obsidian-vault.git
    4e7378f..886e955  master -> master
+[master 170f048] Auto-commit: Hermes analysis updates
+ 49 files changed, 14100 insertions(+)
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-130-MTD-MTM-order-flow.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-131-MTD-KAM-order-flow.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-132-MTD-Booking-order-flow.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-133-MTD-First-trip-order-flow.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-146-Last-Day-Processed.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-151-Order-Target-Achieved.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-1517-Top-200-Merchants-last-Duration-Days.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-1520-Top-20-Merchant-Order-Distribution-Last-Duration-Days.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-159-MTD-Total-Processed.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-1663-Forecasting-Global.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-1844-Revenue-Target-Achieved.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-218-MTD-Churnback-Orders.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-224-Today-MTM-Created-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-225-MTD-MTM-Processed-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-226-MTD-MTM-Revenue-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-227-MTD-MTM-Achieved-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-228-MTD-MTM-Trend.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-229-MTD-MTM-Order-Distribution.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-230-Today-KAM-Created.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-231-MTD-KAM-Processed-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-232-MTD-KAM-Revenue-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-2323-Forecasting-KAM.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-2324-Forecasting-MTM.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-233-MTD-KAM-Achieved-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-234-MTD-KAM-Trend.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-235-MTD-KAM-Order-Distribution.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-236-Today-Point-Created-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-237-MTD-Point-Processed-LIVE.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-238-MTD-Point-Revenue.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-239-MTD-Retail-Achieved.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-240-MTD-Point-Order-Trend.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-241-Retail-Point-Order-Distribution.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-242-MTD-ALL-Order-Merchants-Trend.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-243-MTD-All-Order-Distribution.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-287-MTD-Total-Revenue.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-311-First-Trip-Merchants-Order.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-312-First-Trip-Merchants-Count.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-313-First-Trip-Merchants-Revenue.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-314-Churn-Back-Merchants-Order.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-315-Churn-Back-Merchants-Count.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3157-Channel-Wise-Distribution.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-316-Churn-Back-Merchants-Revenue.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3255-Revenue-Target-Achieved-KAM.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3256-Revenue-Target-Achieved-MTM.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3260-Exclusive-Merchant-Performance-DOD.sql
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/dashboard-31-raw.json
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md
+ create mode 100644 05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/proposed-system-vault-updates.md
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Git pull failed, remote might be unreachable.
+To github.com:sajibkhansk/sajib-obsidian-vault.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'github.com:sajibkhansk/sajib-obsidian-vault.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Git push failed, remote might be unreachable.

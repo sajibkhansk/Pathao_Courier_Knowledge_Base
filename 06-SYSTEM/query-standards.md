@@ -24,3 +24,12 @@ These standards ensure consistent calculation of business metrics across the Pat
 
 ## 5. Date Partitioning
 - BigQuery tables are partitioned. Always filter on `created_at` or `updated_at` (e.g. `updated_at >= '2026-06-01'`) to restrict partitions and prevent high query costs.
+
+## Dashboard 31 Caveats: MTD Business Team Performance
+
+- Dashboard 31 uses `merchant_id <> 1` for this process. Preserve this filter when reproducing Dashboard 31 metrics, even though the general business-metric standard elsewhere may exclude `merchant_id NOT IN (1, 2, 99)`.
+- Dashboard 31 often unions `public_orders` and `public_archived_orders`; do not query only active orders when reproducing dashboard values.
+- Default dashboard `current_month = Yes` usually means month start through yesterday, excluding today.
+- Processed/revenue metrics usually use `sorted_at`; Retail/Point/Booking Point cards may use `created_at`.
+- Retail, Point, and Booking Point are the same segment for this dashboard process. SQL uses `order_type_id IN (16,18)` and targets use `team_name = 'Retail'`.
+- Some cards use Metabase database 2 Postgres (`orders`) while most use BigQuery Datastream database 7. Prefer Datastream-first unless exact dashboard replication requires the card's original database.
