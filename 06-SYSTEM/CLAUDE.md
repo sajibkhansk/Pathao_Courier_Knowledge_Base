@@ -24,6 +24,6 @@ When explicitly commanded to update the system layer based on a provided resourc
 
 ## SQL Style & Standards
 - Exclude test merchants: `merchant_id NOT IN (1, 2, 99)`.
-- Use timezone `Asia/Dhaka` for business date context.
+- Defualt time zone Use timezone `Asia/Dhaka` for business date context.
 - Use `is_full_delivery = true` to count true completed deliveries.
 - Apply `updated_at` or `created_at` partition filters for BigQuery tables.
