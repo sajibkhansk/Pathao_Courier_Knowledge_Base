@@ -30,3 +30,17 @@ Use these standard join paths to combine tables in `courier_realtime_datastream`
   - `data-cloud-production.hermes_bz_comms.business_team_targets.team_name` maps to `MTM`, `KAM`, `Retail`, and `Total`.
   - Target month is matched by `DATE(start_of_month) = DATE_TRUNC(CURRENT_DATE(), MONTH)` or by the selected `start_date` month.
 - Forecasting uses `data-cloud-production.hermes_bz_comms.business_working_days.days` for the current month.
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_merchants.md|public_merchants]]
+- [[06-SYSTEM/semantic-layer/tables/public_archived_orders.md|public_archived_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]]
+- [[06-SYSTEM/semantic-layer/tables/business_team_targets.md|business_team_targets]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md|Business Team Forecasting]]
+- [[06-SYSTEM/semantic-layer/metrics/delivery_rate.md|Delivery Rate]]
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]]
+- [[06-SYSTEM/query-standards.md|SQL Query Standards]]

@@ -23,3 +23,12 @@ WHERE merchant_id IN (
   WHERE ties_id = 67
 )
 ```
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_merchants.md|public_merchants]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md|Business Team Forecasting]]
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]]

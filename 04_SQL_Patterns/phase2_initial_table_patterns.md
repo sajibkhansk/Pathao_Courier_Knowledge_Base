@@ -106,6 +106,17 @@ WHERE osc.updated_at >= TIMESTAMP('YYYY-MM-DD')
   AND o.updated_at >= TIMESTAMP('YYYY-MM-DD')
 ```
 
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_archived_orders.md|public_archived_orders]]
+- [[06-SYSTEM/semantic-layer/metrics/delivery_rate.md|Delivery Rate]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[06-SYSTEM/semantic-layer/relationships.md|Table Relationships]]
+- [[06-SYSTEM/query-standards.md|SQL Query Standards]]
+- [[03_Business_Logic/cds_key_descriptions.md|CDS Key Descriptions]]
+- [[04_SQL_Patterns/cds_cte_patterns.md|CDS CTE Patterns]]
+
 ## Open Orders Definition
 
 Human Oracle confirmed: use `on_process = 1` from `hermes_bz_comms.courier_transfer_status`.

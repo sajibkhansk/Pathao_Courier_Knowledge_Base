@@ -450,3 +450,14 @@ SQL-generation note:
 - `type IN (2, 11)` is used in IR agent productivity cards for 'assigned' events (BULK_REPORTER_ASSIGN and ASSIGNED_TO_IR).
 - `type = 10` (HANDOVER_TO_IR) is used for IR handover events.
 - `type = 11` (ASSIGNED_TO_IR) is used when an issue is assigned specifically to an IR team member.
+
+## Related Notes
+
+- [[04_SQL_Patterns/cds_cte_patterns.md|CDS CTE Patterns]] — reusable CTEs from same CDS source
+- [[03_Business_Logic/order_status_changes_human_oracle.md|OSC Human Oracle]] — uses CDS OSC type mapping
+- [[03_Business_Logic/order_fields_human_oracle.md|Order Fields Human Oracle]]
+- [[03_Business_Logic/merchant_logic_human_oracle.md|Merchant Logic Human Oracle]] — references merchant_type from CDS
+- [[03_Business_Logic/hub_facility_logic_human_oracle.md|Hub Facility Logic]] — hub_operation_type mapping
+- [[03_Business_Logic/run_routes_human_oracle.md|Run Routes Human Oracle]] — transfer_type mapping from CDS
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]]
+- [[04_SQL_Patterns/phase2_initial_table_patterns.md|Initial Table Patterns]]

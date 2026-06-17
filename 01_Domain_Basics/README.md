@@ -186,3 +186,13 @@ Resolved after Phase 2:
 
 Remaining:
 - Confirm which merchant classification field should be used as the source of truth for B2C stakeholder reporting: `merchant_type`, `merchant_category`, `product_category`, `category`, or another business-team field.
+
+## Related Notes
+
+- [[03_Business_Logic/cds_key_descriptions.md|CDS Key Descriptions]] — order_type_id, merchant_type, hub_operation_type mappings
+- [[03_Business_Logic/hub_facility_logic_human_oracle.md|Hub Facility Logic Oracle]]
+- [[03_Business_Logic/merchant_logic_human_oracle.md|Merchant Logic Oracle]]
+- [[03_Business_Logic/order_status_changes_human_oracle.md|OSC Human Oracle]]
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]]
+- [[06-SYSTEM/semantic-layer/relationships.md|Table Relationships]]
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]

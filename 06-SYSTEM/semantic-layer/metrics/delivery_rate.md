@@ -18,3 +18,11 @@ WHERE merchant_id NOT IN (1, 2, 99)
 ## Gotchas & Constraints
 - Exclude test merchants: `merchant_id NOT IN (1, 2, 99)`.
 - Ensure `is_full_delivery = TRUE` is used to represent actual completed deliveries, not partial completions.
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]] — source table
+- [[03_Business_Logic/order_status_changes_human_oracle.md|Order Status Changes Human Oracle]]
+- [[06-SYSTEM/query-standards.md|SQL Query Standards]]
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]] (defines "Completed Delivery")
+- [[04_SQL_Patterns/phase2_initial_table_patterns.md|Initial Table Patterns]]

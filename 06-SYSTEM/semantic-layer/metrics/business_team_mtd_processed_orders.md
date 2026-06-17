@@ -39,3 +39,14 @@ transfer_status_id IN (8,9,10,11,12,13,22,23,24,26,28,25,14,30,31,32,33,36,37,38
 ## Dashboard 31 Merchant Filter
 
 Use `merchant_id <> 1` for this dashboard process.
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]] — source table
+- [[06-SYSTEM/semantic-layer/tables/public_archived_orders.md|public_archived_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]] — team segment mapping
+- [[06-SYSTEM/semantic-layer/tables/business_team_targets.md|business_team_targets]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md|Business Team Forecasting]]
+- [[06-SYSTEM/semantic-layer/query-standards.md|SQL Query Standards]]
+- [[04_SQL_Patterns/cds_cte_patterns.md|CDS CTE Patterns]]

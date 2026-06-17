@@ -281,3 +281,13 @@ merchant_wallet_infos AS (
   ) = 1
 )
 ```
+
+## Related Notes
+
+- [[03_Business_Logic/cds_key_descriptions.md|CDS Key Descriptions]] — enum mappings from same CDS source
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_merchants.md|public_merchants]]
+- [[06-SYSTEM/semantic-layer/tables/public_archived_orders.md|public_archived_orders]]
+- [[06-SYSTEM/semantic-layer/relationships.md|Table Relationships]]
+- [[06-SYSTEM/query-standards.md|SQL Query Standards]]
+- [[04_SQL_Patterns/phase2_initial_table_patterns.md|Initial Table Patterns]]
