@@ -1,4 +1,4 @@
-# Domain Basics
+- [ ] # Domain Basics
 
 Status: Phase 1 documented from Human Oracle answers. Ready for Phase 2 database profiling.
 
