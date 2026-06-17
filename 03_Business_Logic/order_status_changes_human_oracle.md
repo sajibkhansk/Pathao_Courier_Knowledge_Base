@@ -142,6 +142,15 @@ See also:
 CDS snippet id `8` documents `public_order_status_changes.type`; see:
 - `03_Business_Logic/cds_key_descriptions.md`
 
+## Related Notes
+
+- [[03_Business_Logic/price_change_logic.md|Price Change Logic]] — uses OSC logs for detection
+- [[03_Business_Logic/cds_key_descriptions.md|CDS Key Descriptions]] — OSC type mapping source
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/metrics/delivery_rate.md|Delivery Rate]]
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]]
+- [[04_SQL_Patterns/phase2_initial_table_patterns.md|Initial Table Patterns]]
+
 Important commonly used value:
 
 ```text

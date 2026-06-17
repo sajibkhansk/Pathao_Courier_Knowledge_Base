@@ -107,3 +107,18 @@ transfer_status_id IN (8,9,10,11,12,13,22,23,24,26,28,25,14,30,31,32,33,36,37,38
 - **Date field differs by metric**: Most processed/revenue/forecasting cards use `sorted_at`; Retail/Point/Booking Point cards may use `created_at`.
 - **Timestamps**: Raw timestamps are UTC. Use Asia/Dhaka for business-day context when required.
 - **Partition/cost guard**: Use practical date filters and `updated_at IS NOT NULL` patterns for Datastream tables.
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/metrics/delivery_rate.md|Delivery Rate]]
+- [[03_Business_Logic/order_status_changes_human_oracle.md|Order Status Changes (OSC) Human Oracle]]
+- [[06-SYSTEM/semantic-layer/tables/public_archived_orders.md|public_archived_orders]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md|Business Team Forecasting]]
+- [[06-SYSTEM/semantic-layer/tables/public_merchants.md|public_merchants]]
+- [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]]
+- [[06-SYSTEM/semantic-layer/tables/business_team_targets.md|business_team_targets]]
+- [[06-SYSTEM/query-standards.md|SQL Query Standards]]
+- [[04_SQL_Patterns/cds_cte_patterns.md|CDS CTE Patterns]]
+- [[04_SQL_Patterns/phase2_initial_table_patterns.md|Initial Table Patterns]]

@@ -96,3 +96,12 @@ Operational meaning:
 
 - CRM table schema and content details for `AppSmith-Write-DB > public` — pending future documentation.
 - Exact logic for monthly 300-parcel KAM assignment threshold in automated reporting.
+
+## Related Notes
+
+- [[03_Business_Logic/cds_key_descriptions.md|CDS Key Descriptions]] — merchant_type mapping source
+- [[06-SYSTEM/semantic-layer/tables/public_merchants.md|public_merchants]]
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/glossary.md|Glossary]]

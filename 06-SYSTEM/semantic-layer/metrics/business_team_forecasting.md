@@ -30,3 +30,12 @@ AND DATE(sorted_at) < CURRENT_DATE()
 ## Dashboard 31 Merchant Filter
 
 Use `merchant_id <> 1` for this dashboard process.
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]] — source table
+- [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]] — team segment mapping
+- [[06-SYSTEM/semantic-layer/tables/business_team_targets.md|business_team_targets]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[06-SYSTEM/semantic-layer/query-standards.md|SQL Query Standards]]

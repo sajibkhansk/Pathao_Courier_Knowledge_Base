@@ -80,3 +80,14 @@ Channel Wise Distribution category priority includes merchant metadata:
 - **`merchant_id` column ambiguity**: `public_merchants.merchant_id` exists as `STRING(255)`, while `public_orders.merchant_id` is `INT64`; use `public_merchants.id` for order joins unless another process explicitly documents otherwise.
 - **Dashboard 31 merchant exclusion**: Merchant/order filtering for this process uses `orders.merchant_id <> 1`.
 - **General default outside Dashboard 31**: Use standard test-merchant exclusions unless a dashboard/process-specific rule is documented.
+
+## Related Notes
+
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]]
+- [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[03_Business_Logic/merchant_logic_human_oracle.md|Merchant Business Logic Oracle]]
+- [[03_Business_Logic/cds_key_descriptions.md|CDS Key Descriptions]] (merchant_type mapping)
+- [[06-SYSTEM/semantic-layer/tables/business_team_targets.md|business_team_targets]]
+- [[04_SQL_Patterns/cds_cte_patterns.md|CDS CTE Patterns]]

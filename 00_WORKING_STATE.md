@@ -31,6 +31,18 @@ Price Change detection via OSC logs: collectable amount change event/payload pat
 - `_INDEX_START_HERE.md` — added `price_change_logic.md` to Business Logic file map.
 - `00_WORKING_STATE.md` — updated this state.
 
+## Related Notes
+
+- [[03_Business_Logic/price_change_logic.md|Price Change Logic]] — current active topic
+- [[03_Business_Logic/order_status_changes_human_oracle.md|OSC Human Oracle]] — canonical OSC business rules
+- [[06-SYSTEM/semantic-layer/tables/public_orders.md|public_orders]] — source table for order-level metrics
+- [[06-SYSTEM/semantic-layer/metrics/delivery_rate.md|Delivery Rate Metric]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md|MTD Processed Orders]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|MTD Revenue]]
+- [[06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md|Business Team Forecasting]]
+- [[04_SQL_Patterns/phase2_initial_table_patterns.md|Initial Table Patterns]]
+- [[06-SYSTEM/query-standards.md|SQL Query Standards]]
+
 ## Pending Open Questions
 
 - [ ] Which OSC event identifies collectable amount change: specific `type`, `status_id`, `desc`, or payload key?
