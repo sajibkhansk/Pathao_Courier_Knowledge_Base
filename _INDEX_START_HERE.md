@@ -42,6 +42,10 @@ Current files:
 - `run_routes_human_oracle.md` — Human Oracle meanings for `public_run_routes.run_route_type`, `transfer_type`, basket/direct parcel assignment, `is_close`, `status_id`, and ignored fields.
 - `hub_facility_logic_human_oracle.md` — canonical Human Oracle rules for hub operation types, central sort, sub-sort, sub-hub/booking point, LMH, hub `type`, `tier_type`, and deprecated hub JSON fields.
 - `merchant_logic_human_oracle.md` — Human Oracle rules for merchant classification sourcing (`merchant_type` is reliable, `merchant_category`/`product_category`/`category` are not), `source` panel mapping, KAM assignment threshold, and CRM DB.
+- `ir_kobiraj_logic_human_oracle.md` — IR/Kobiraj issue lifecycle, status meanings, tag_type mapping, team mappings, SLA logic, and known card patterns from Phase 3 Metabase deep dive.
+- `return_revamp_logic.md` — Return lifecycle statuses (43/25/44/11), cycle detection pattern, and Return Revamp dashboard card catalog.
+- `open_orders_business_logic.md` — Open order status definition (use `on_process` from `courier_transfer_status`), default filters, section/responsible logic notes, return order aging rule, aging buckets, and known card patterns from Open Orders collection.
+- `price_change_logic.md` — Price Change / COD Reduction logic from Phase 3: use OSC logs for collectable amount changes, merchant OTP meaning, tunable flagging thresholds, delivered vs exchange inclusion, and observed Price Change card catalog.
 
 ### 04_SQL_Patterns
 Use for reusable SQL snippets and implementation details: partition elimination, timezone handling, date windows, dedupe patterns, Metabase parameter conventions.

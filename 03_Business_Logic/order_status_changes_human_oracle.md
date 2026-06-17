@@ -118,6 +118,25 @@ Caution:
 - Do not assume every table’s payload/meta JSON follows the same `old` / `new` structure.
 - Use the old/new pattern specifically when the OSC event is expected to record previous and changed values.
 
+## Price Change Detection Uses OSC Logs
+
+Human Oracle guidance:
+- To identify price changes, inspect OSC logs rather than comparing final `public_orders.collectable_amount` and `public_orders.collected_amount`.
+- In a completed price-change order, collectable amount is changed and then `collectable_amount = collected_amount`.
+
+SQL-generation rule:
+
+```sql
+-- Do not use this as the canonical price-change detector:
+-- public_orders.collectable_amount <> public_orders.collected_amount
+
+-- Use public_order_status_changes payload/status/desc evidence for collectable amount changes.
+-- Exact OSC payload paths are tracked in 03_Business_Logic/price_change_logic.md open questions.
+```
+
+See also:
+- `03_Business_Logic/price_change_logic.md`
+
 ## Known OSC Type Mapping
 
 CDS snippet id `8` documents `public_order_status_changes.type`; see:

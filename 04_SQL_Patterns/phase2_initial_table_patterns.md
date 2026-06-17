@@ -1,6 +1,4 @@
-# Phase 2 Initial Table SQL Patterns
-
-Status: initial patterns documented from known Pathao Courier data navigation conventions and table metadata.
+# Pathao Courier SQL Patterns
 
 ## Default Datastream Table Pattern
 
@@ -12,53 +10,89 @@ WHERE updated_at >= TIMESTAMP('YYYY-MM-DD')
 
 For joins across multiple datastream tables, apply partition predicates to each partitioned table where Metabase/BigQuery requires it.
 
+## Standard Orders CTE Snippet
+
+From OPS KPI {{snippet: orders}}:
+
+```sql
+WITH orders AS (
+  SELECT *
+  FROM courier_realtime_datastream.public_orders
+  WHERE updated_at IS NOT NULL
+  UNION ALL
+  SELECT *
+  FROM courier_realtime_datastream.public_archived_orders
+  WHERE updated_at IS NOT NULL
+)
+```
+
 ## Default Order Analytics Filters
 
-Unless the user explicitly asks otherwise:
+Unless explicitly asked otherwise:
 
 ```sql
 WHERE merchant_id <> 1
   AND country_id = 1
 ```
 
-For general date-ranged order analytics, default to `orders.sorted_at` when present because this is when a parcel is physically in Pathao's system and SLA countdown starts.
+For general date-ranged order analytics, default to `orders.sorted_at` when present.
 
-Default operational-day convention:
-- Pathao Courier operations run overnight; the operational day is considered **6:00 AM to 6:00 AM**.
-- Even though operations are in Dhaka, Bangladesh, use the database default timestamp/date context (`UTC+0`) for default date filtering/aggregation unless the user explicitly requests a Dhaka-local calendar day.
-- Parcels processed/handled after 12:00 AM Dhaka time can still belong to the previous operations date/day.
-- For ordinary stakeholder date aggregation, use the DB/default timestamp treatment on `sorted_at`; do not automatically convert to `Asia/Dhaka` unless explicitly requested.
+## Timezone and Operational Day Conventions
 
-Default pattern:
+**Default: Use UTC+0 (DB default) for all filtering and grouping.**
+
+Rules:
+1. Do NOT convert to Asia/Dhaka for date filtering, date grouping, or operational-day logic unless the user explicitly asks for Dhaka/local time.
+2. When OUTPUTTING datetime values to stakeholders, convert to Asia/Dhaka (Dhaka time).
+3. The operational day boundary: Pathao operations run past midnight Dhaka time. Activities up to approximately 7am Dhaka time (1am UTC) may still be considered previous-day activity. However, since the DB follows UTC+0, using DB/default UTC dates is sufficient for operational day purposes in most cases.
+4. Only use `Atlantic/Cape_Verde` (UTC-1) or other timezone hacks if an existing card already uses that pattern and needs to be reproduced exactly.
 
 ```sql
-WHERE DATE(sorted_at) BETWEEN DATE('YYYY-MM-DD') AND DATE('YYYY-MM-DD')
+-- For stakeholder display (datetime output):
+SELECT DATETIME(created_at, "Asia/Dhaka") AS created_at_dhaka
+FROM ...
+
+-- For filtering/grouping by date (use UTC+0):
+SELECT COUNT(*) 
+FROM orders
+WHERE DATE(created_at) BETWEEN 'YYYY-MM-DD' AND 'YYYY-MM-DD'
 ```
 
-If a metric explicitly requires a 6AM Dhaka operational-day bucketing, label it clearly and use an adjusted operational date expression rather than silently changing the default.
+## Return/Reverse Aging Pattern
 
-Do not add this by habit unless needed/requested:
+Human Oracle confirmed:
+- For return orders, aging starts from the **previous order's (delivery journey) `sorted_at`**.
 
 ```sql
--- Do not add by default:
--- deleted_at IS NULL
+CASE
+  WHEN o.order_type_id = 2 THEN 
+    EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - previous_order.sorted_at)) / 86400.0
+  ELSE
+    EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - o.created_at)) / 86400.0
+END AS aging_days
+```
+
+Join pattern for return aging:
+```sql
+LEFT JOIN orders previous_order
+  ON o.previous_order_id = previous_order.consignment_id
 ```
 
 ## Returned/Reverse Parcel Grain Warning
 
-A returned physical parcel can have two `orders` rows:
+A returned physical parcel can have 2 `orders` rows:
 
 ```text
 Dxxxx = forward-facing journey
-Rxxx = reverse journey for regular return
-Pxxx = reverse journey for reverse pickup
+Rxxx  = reverse journey for regular return
+Pxxx  = reverse journey for reverse pickup
 ```
 
-When analyzing returns/reverse pickup, avoid blindly counting `orders.id` as physical parcel count.
+When analyzing returns, use `previous_order_id` to link forward and reverse journeys.
 
 ## Event Timestamp Pattern
 
-For lifecycle events, prefer `public_order_status_changes.created_at` as the event timestamp and join back to `public_orders` for merchant/country/consignment context.
+For lifecycle events, prefer `public_order_status_changes.created_at` as the event timestamp.
 
 ```sql
 SELECT
@@ -70,4 +104,17 @@ JOIN courier_realtime_datastream.public_orders AS o
   ON o.id = osc.order_id
 WHERE osc.updated_at >= TIMESTAMP('YYYY-MM-DD')
   AND o.updated_at >= TIMESTAMP('YYYY-MM-DD')
+```
+
+## Open Orders Definition
+
+Human Oracle confirmed: use `on_process = 1` from `hermes_bz_comms.courier_transfer_status`.
+
+```sql
+SELECT COUNT(DISTINCT o.consignment_id)
+FROM courier_realtime_datastream.public_orders o
+JOIN hermes_bz_comms.courier_transfer_status ts
+  ON o.transfer_status_id = ts.transfer_status_id
+WHERE ts.on_process = 1
+  AND o.country_id = 1
 ```

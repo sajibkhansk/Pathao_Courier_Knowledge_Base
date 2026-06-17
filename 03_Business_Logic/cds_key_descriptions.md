@@ -421,4 +421,32 @@ CASE
   WHEN pickup_hub = 'OSD' AND delivery_hub = 'RSD' THEN 8
   WHEN pickup_hub = 'OSD' AND delivery_hub = 'OSD' THEN 9
 END AS distance_id
+
+## Issue Activity Logs Type
+
+CDS snippet id: `43`
+Title: `issue_acticity_logs type`
+Category: `Key's Description`
+
+```text
+1 - New Issue
+2 - BULK_REPORTER_ASSIGN
+3 - BULK_ASSIGNEE_ASSIGN
+4 - ISSUE_SOLVED
+5 - ISSUE_CLOSED
+6 - REPORTER_ASSIGNED
+7 - CATEGORY_CHANGED
+8 - SUB_CATEGORY_CHANGED
+9 - REPORTER_REASSIGN
+10 - HANDOVER_TO_IR
+11 - ASSIGNED_TO_IR
+12 - ISSUE_SOLVED_BY_IR
+13 - ISSUE_TIME_EXTENDED
+14 - CC_ADDED
+15 - CC_REMOVED
 ```
+
+SQL-generation note:
+- `type IN (2, 11)` is used in IR agent productivity cards for 'assigned' events (BULK_REPORTER_ASSIGN and ASSIGNED_TO_IR).
+- `type = 10` (HANDOVER_TO_IR) is used for IR handover events.
+- `type = 11` (ASSIGNED_TO_IR) is used when an issue is assigned specifically to an IR team member.
