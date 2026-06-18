@@ -14,9 +14,9 @@ These standards ensure consistent calculation of business metrics across the Pat
 
 ## 3. Timezones
 - Raw database timestamp fields are stored in UTC.
-- For business operations and daily/weekly filters, convert timestamps to local Asia/Dhaka timezone:
-  `DATETIME(created_at, "Asia/Dhaka")`
-- Return query outputs in the database/Metabase default timezone, not Asia/Dhaka time, unless explicitly requested.
+- Use UTC for both filters and output columns by default.
+- Only apply Asia/Dhaka timezone conversion when the user explicitly requests it.
+- Do not convert filters to Dhaka unless asked — contradicts the no-conversion default.
 
 ## 4. Completed Deliveries
 - Do not count partial deliveries as full completions.
