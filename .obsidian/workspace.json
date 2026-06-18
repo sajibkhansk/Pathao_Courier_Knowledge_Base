@@ -181,6 +181,8 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "07-FEEDBACK-INBOX/_README.md",
+    "07-FEEDBACK-INBOX",
     "06-SYSTEM/semantic-layer/relationships.md",
     "06-SYSTEM/semantic-layer/glossary.md",
     "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
@@ -211,7 +213,6 @@
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-315-Churn-Back-Merchants-Count.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-314-Churn-Back-Merchants-Order.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-313-First-Trip-Merchants-Revenue.sql",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-312-First-Trip-Merchants-Count.sql",
     "06-SYSTEM/MEMORY.md",
     "06-SYSTEM/USER.md",
     "05-HERMES-OUTPUTS/analyses/hello-world.md",
