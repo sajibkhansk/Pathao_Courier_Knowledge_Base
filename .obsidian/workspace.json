@@ -11,10 +11,14 @@
             "id": "b968d1f6124ba475",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "06-SYSTEM/semantic-layer/glossary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "glossary"
             }
           }
         ]
@@ -182,6 +186,7 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
     "01_Domain_Basics/README.md",
     "02_Data_Dictionary/core_tables_phase2_profile.md",
     "Untitled.md",
@@ -196,7 +201,6 @@
     "06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
     "06-SYSTEM/semantic-layer/tables/public_orders.md",
-    "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
     "06-SYSTEM/semantic-layer/metrics/sorting_volume.md",
     "06-SYSTEM/semantic-layer/metrics/open_orders.md",
     "06-SYSTEM/query-standards.md",
