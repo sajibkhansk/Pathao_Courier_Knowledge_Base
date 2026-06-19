@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07-FEEDBACK-INBOX/2026-06-18.md",
+                "file": "07-FEEDBACK-INBOX/2026-06-19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-18"
+              "title": "2026-06-19"
             }
           }
         ]
@@ -186,10 +186,26 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "07-FEEDBACK-INBOX/2026-06-18.md",
+    "07-FEEDBACK-INBOX/2026-06-19.md",
+    "06-SYSTEM/semantic-layer/tables/new_onboards.md",
+    "06-SYSTEM/semantic-layer/tables/crm_user_targets.md",
+    "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-validation-report.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-open-questions.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory-meta.json",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-filter-map.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-card-queries.json",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-business-logic.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard",
+    "03_Business_Logic/crm_onboard_logic.md",
+    "03_Business_Logic/crm_merchant_attribution.md",
     "07-FEEDBACK-INBOX/_README.md",
     "00_STRUCTURE_AUDIT.md",
     "_INDEX_START_HERE.md",
-    "07-FEEDBACK-INBOX/2026-06-18.md",
     "07-FEEDBACK-INBOX",
     "06-SYSTEM/semantic-layer/relationships.md",
     "06-SYSTEM/semantic-layer/glossary.md",
@@ -200,27 +216,11 @@
     "06-SYSTEM/CLAUDE.md",
     "06-SYSTEM/feedback-log.md",
     "06-SYSTEM/semantic-layer/metrics/business_team_forecasting.md",
-    "06-SYSTEM/semantic-layer/tables/public_merchants.md",
-    "06-SYSTEM/semantic-layer/tables/business_team_targets.md",
-    "06-SYSTEM/semantic-layer/tables/public_archived_orders.md",
-    "06-SYSTEM/semantic-layer/metrics/delivery_rate.md",
-    "06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md",
-    "06-SYSTEM/semantic-layer/metrics/business_team_mtd_processed_orders.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
-    "06-SYSTEM/semantic-layer/tables/public_orders.md",
-    "06-SYSTEM/semantic-layer/metrics/sorting_volume.md",
-    "06-SYSTEM/semantic-layer/metrics/open_orders.md",
-    "06-SYSTEM/query-standards.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/proposed-system-vault-updates.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/dashboard-31-raw.json",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3260-Exclusive-Merchant-Performance-DOD.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3256-Revenue-Target-Achieved-MTM.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3255-Revenue-Target-Achieved-KAM.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-316-Churn-Back-Merchants-Revenue.sql",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3157-Channel-Wise-Distribution.sql",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-315-Churn-Back-Merchants-Count.sql",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-314-Churn-Back-Merchants-Order.sql",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-313-First-Trip-Merchants-Revenue.sql",
-    "06-SYSTEM/MEMORY.md"
+    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3157-Channel-Wise-Distribution.sql"
   ]
 }
