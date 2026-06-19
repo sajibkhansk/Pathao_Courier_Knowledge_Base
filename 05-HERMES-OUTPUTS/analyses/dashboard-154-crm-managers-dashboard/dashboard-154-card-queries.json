@@ -1,0 +1,1459 @@
+[
+  {
+    "id": 2013,
+    "name": "Total Leads",
+    "display": "scalar",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": null,
+    "visualization_settings": {},
+    "parameters": [],
+    "native_sql": "SELECT COUNT(*) AS total_new_onboards\nFROM `courier_appsmith.new_onboards`\nWHERE business_team_user_id <> '1'\n  AND is_deleted <> TRUE\nAND date(created_at) >=   DATE_TRUNC((CURRENT_DATE()), MONTH)\nAND date(created_at) <=   CURRENT_DATE()"
+  },
+  {
+    "id": 2028,
+    "name": "Total Processed",
+    "display": "scalar",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 50,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "scalar.segments": [],
+      "table.columns": [
+        {
+          "name": "f0_",
+          "enabled": true
+        },
+        {
+          "name": "Processed",
+          "enabled": true
+        }
+      ],
+      "pie.dimension": [
+        "Status"
+      ],
+      "table.cell_column": "processed",
+      "pie.show_labels": false,
+      "pie.rows": [
+        {
+          "key": "Info Pending",
+          "name": "Info Pending",
+          "originalName": "Info Pending",
+          "color": "#E75454",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "First Order Pending",
+          "name": "First Order Pending",
+          "originalName": "First Order Pending",
+          "color": "#ED8535",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Incubation",
+          "name": "Incubation",
+          "originalName": "Incubation",
+          "color": "#88BF4D",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Churn",
+          "name": "Churn",
+          "originalName": "Churn",
+          "color": "#F9D45C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        },
+        {
+          "key": "Hunt",
+          "name": "Hunt",
+          "originalName": "Hunt",
+          "color": "#98D9D9",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        }
+      ],
+      "table.column_formatting": [
+        {
+          "columns": [
+            "Merchant_Count"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        }
+      ],
+      "pie.metric": "estimated_volume",
+      "pie.decimal_places": 1,
+      "table.pivot_column": "merchant_name",
+      "column_settings": {}
+    },
+    "parameters": [],
+    "native_sql": "select Processed\nFROM {{#2060-sales-overview-merchants-specific}}\nWHERE MERCHANT_ID = 'TOTAL'"
+  },
+  {
+    "id": 2029,
+    "name": "Total Expected Revenue",
+    "display": "scalar",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 50,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "table.columns": [
+        {
+          "name": "Acquisition_Member",
+          "enabled": true
+        },
+        {
+          "name": "Merchant_Count",
+          "enabled": true
+        },
+        {
+          "name": "Expected_Revenue",
+          "enabled": true
+        },
+        {
+          "name": "baki_Column",
+          "enabled": true
+        },
+        {
+          "name": "f0_",
+          "enabled": true
+        },
+        {
+          "name": "total_expected_revenue",
+          "enabled": true
+        }
+      ],
+      "pie.dimension": [
+        "Status"
+      ],
+      "table.cell_column": "processed",
+      "pie.show_labels": false,
+      "pie.rows": [
+        {
+          "key": "Info Pending",
+          "name": "Info Pending",
+          "originalName": "Info Pending",
+          "color": "#E75454",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "First Order Pending",
+          "name": "First Order Pending",
+          "originalName": "First Order Pending",
+          "color": "#ED8535",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Incubation",
+          "name": "Incubation",
+          "originalName": "Incubation",
+          "color": "#88BF4D",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Churn",
+          "name": "Churn",
+          "originalName": "Churn",
+          "color": "#F9D45C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        },
+        {
+          "key": "Hunt",
+          "name": "Hunt",
+          "originalName": "Hunt",
+          "color": "#98D9D9",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        }
+      ],
+      "table.column_formatting": [
+        {
+          "columns": [
+            "Merchant_Count"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        }
+      ],
+      "pie.metric": "estimated_volume",
+      "pie.decimal_places": 1,
+      "table.pivot_column": "merchant_name",
+      "column_settings": {}
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  SELECT \n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n    AND (\n      DATE(sorted_at) >= DATE_TRUNC(CURRENT_DATE(), MONTH)\n      OR DATE(created_at) >= DATE_ADD(\n        DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n        INTERVAL 15 DAY)\n    )\n),\nnew_onboards AS (\n  SELECT \n    merchant_id,\n    phone,\n    created_at,\n    onboard_type\n  FROM courier_appsmith.new_onboards\n  WHERE business_team_user_id <> '1'\n    AND is_deleted <> TRUE\n    AND status <> 'Inactive'\n),\nmerchants_by_merchant_id AS (\n  SELECT m.id, m.phone, DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  INNER JOIN new_onboards nob ON m.id = nob.merchant_id\n  WHERE m.updated_at IS NOT NULL AND m.kam_id IS NULL\n),\nmerchants_by_phone AS (\n  SELECT m.id, m.phone, DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  INNER JOIN new_onboards nob ON m.phone = nob.phone AND nob.merchant_id IS NULL\n  WHERE m.updated_at IS NOT NULL AND m.kam_id IS NULL\n),\nmerchants AS (\n  SELECT * FROM merchants_by_merchant_id\n  UNION ALL\n  SELECT * FROM merchants_by_phone\n),\nfirst_orders AS (\n  SELECT \n    m.id AS merchant_id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(o.transfer_status_id IN ({{snippet: processed_orders}})) AS processed,\n    (\n      SUM(\n        IF(\n          o.transfer_status_id IN ({{snippet: processed_orders}}),\n          (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n          - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n          0\n        )\n      ) / 100\n      +\n      SUM(\n        IF(\n          o.transfer_status_id IN ({{snippet: processed_orders}}),\n          COALESCE(o.cash_on_delivery_fee,0),\n          0\n        )\n      ) / 100\n    ) AS expected_rvn_all\n  FROM orders o\n  WHERE DATE(o.sorted_at) >= DATE_TRUNC(CURRENT_DATE(), MONTH)\n    AND DATE(o.sorted_at) <= CURRENT_DATE()\n  GROUP BY o.merchant_id\n),\nfinal AS (\n  SELECT\n    m.id AS merchant_id,\n    m.phone,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0) AS processed,\n    COALESCE(om.expected_rvn_all, 0) AS expected_rvn_all\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.merchant_id = m.id\n  LEFT JOIN orders_month om ON om.merchant_id = m.id\n),\njoined_by_merchant_id AS (\n  SELECT n.onboard_type, n.created_at, f.first_order_date_after_lead_creation, f.expected_rvn_all\n  FROM new_onboards n\n  LEFT JOIN final f ON f.merchant_id = n.merchant_id\n  WHERE n.merchant_id IS NOT NULL\n),\njoined_by_phone AS (\n  SELECT n.onboard_type, n.created_at, f.first_order_date_after_lead_creation, f.expected_rvn_all\n  FROM new_onboards n\n  LEFT JOIN final f ON f.phone = n.phone\n  WHERE n.merchant_id IS NULL\n),\nall_joined AS (\n  SELECT * FROM joined_by_merchant_id\n  UNION ALL\n  SELECT * FROM joined_by_phone\n)\n\nSELECT SUM(expected_rvn_all) AS total_expected_revenue\nFROM all_joined\nWHERE\n  ( onboard_type = 'Post Corporate'\n    OR (onboard_type = 'Organic'\n        AND DATE(created_at) >= DATE_ADD(\n              DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n              INTERVAL 15 DAY)\n        AND DATE(created_at) <  DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n    )\n    OR (onboard_type != 'Organic'\n        AND first_order_date_after_lead_creation >= DATE_ADD(\n              DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n              INTERVAL 15 DAY)\n        AND first_order_date_after_lead_creation <  DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n    )\n  )"
+  },
+  {
+    "id": 2031,
+    "name": "Merchant Distribution",
+    "display": "pie",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": 154,
+    "visualization_settings": {},
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH\n  orders AS (\n    SELECT\n      *\n    FROM\n      `courier_realtime_datastream.public_orders`\n    WHERE\n      updated_at >= \"2026-01-01\"\n      AND country_id = 1\n  ),\nnew_onboards AS (\n  SELECT * \n  FROM courier_appsmith.new_onboards\n  WHERE business_team_user_id <> '1'\n    AND is_deleted <> TRUE\n    AND status <> 'Inactive'\n),\n  \n  merchants AS (\n      SELECT m.*, date(nob.created_at) as leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  left join new_onboards nob\n  ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n  and nob.created_at is not null \n  and m.kam_id is null\n  ),\n  \n  /* ADD: Calculate first order date after lead creation */\n  first_orders AS (\n    SELECT \n      m.id,\n      MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n    FROM merchants m\n    LEFT JOIN orders o \n      ON m.id = o.merchant_id \n      AND DATE(o.created_at) >= m.leads_created_at\n    GROUP BY m.id\n  ),\n  \n  /* Aggregate orders for the current month per merchant */\n  orders_month AS (\n    SELECT\n      o.merchant_id,\n      COUNTIF(\n        o.transfer_status_id IN ({{snippet: processed_orders}})\n      ) AS processed,\n      (\n        SUM(\n          IF(\n            o.transfer_status_id IN ({{snippet: processed_orders}} ),\n            (\n              COALESCE(o.delivery_fee, 0) + COALESCE(o.additional_charge, 0)\n            ) - (\n              COALESCE(o.discount, 0) + COALESCE(o.promo_discount, 0)\n            ),\n            0\n          )\n        ) / 100 + SUM(\n          IF(\n            o.transfer_status_id IN ({{snippet: processed_orders}}),\n            COALESCE(o.cash_on_delivery_fee, 0),\n            0\n          )\n        ) / 100\n      ) AS expected_rvn_all\n    FROM\n      orders o\n    WHERE\n      DATE(o.sorted_at) >= DATE_TRUNC(CURRENT_DATE(), MONTH)\n      AND DATE(o.sorted_at) < DATE_ADD(\n        DATE_TRUNC(CURRENT_DATE(), MONTH),\n        INTERVAL 1 MONTH\n      )\n    GROUP BY\n      o.merchant_id\n  ),\n  /* Keep all merchants; fill zeros when no orders */\n  final AS (\n    SELECT\n      m.id AS merchant_id,\n      m.phone,\n      m.name,\n      m.leads_created_at,  /* ADD */\n      fo.first_order_date_after_lead_creation,  /* ADD */\n      COALESCE(om.processed, 0) AS processed,\n      COALESCE(om.expected_rvn_all, 0) AS expected_rvn_all\n    FROM\n      merchants m\n      LEFT JOIN first_orders fo ON fo.id = m.id  /* ADD */\n      LEFT JOIN orders_month om ON om.merchant_id = m.id\n  )\nSELECT COALESCE(n.account_status, n.onboard_type) as Status, \ncount(*) as Merchant_Count \nFROM new_onboards n \nLEFT JOIN final f\n  ON (\n    (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n    OR (n.merchant_id IS NULL AND f.phone = n.phone)\n  )\nWHERE 1=1 \n/* ADD THE PREVIOUS FILTERING LOGIC */\nAND (n.onboard_type = 'Post Corporate'\n  -- Logic 1: For Organic, use n.created_at in current month\n or (n.onboard_type = 'Organic' \n   AND n.created_at >= TIMESTAMP(DATE_TRUNC(CURRENT_DATE(), MONTH))\n   AND n.created_at < TIMESTAMP(DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH))\n  )\n  OR\n  -- Logic 2: For others, use first_order_date from (current_month - 15 days) to current month end\n  (n.onboard_type != 'Organic'\n   AND f.first_order_date_after_lead_creation >= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 15 DAY)\n   AND f.first_order_date_after_lead_creation < DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n  )\n)\ngroup by 1"
+  },
+  {
+    "id": 2033,
+    "name": "First Trip Conversion (Organic)",
+    "display": "funnel",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": 154,
+    "visualization_settings": {
+      "funnel.dimension": "total",
+      "funnel.type": "funnel",
+      "funnel.rows": [
+        {
+          "key": "Total Onboarded",
+          "name": "Total Onboarded",
+          "enabled": true
+        },
+        {
+          "key": "First Trip Merchants",
+          "name": "First Trip Merchants",
+          "enabled": true
+        }
+      ],
+      "funnel.order_dimension": "metric"
+    },
+    "parameters": [],
+    "native_sql": "-- BigQuery (Standard SQL)\nWITH start_month AS (\n  SELECT DATE_TRUNC(CURRENT_DATE(), MONTH) AS d\n),\n\norders AS (\n  SELECT *\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\n  UNION ALL\n\n  SELECT *\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\n\nnew_onboards AS (\n  SELECT *\n  FROM `courier_appsmith.new_onboards`\n  WHERE business_team_user_id <> '1'\n  AND status <> 'Inactive'\n  AND is_deleted <> TRUE\n),\n\nfirst_trip AS (\n  SELECT \n    'First Trip Merchants' AS metric,\n    COUNT(DISTINCT n.merchant_id) AS value\n  FROM new_onboards n\n  CROSS JOIN start_month sm\n  WHERE n.onboard_type = 'Organic'\n    AND n.business_team_user_id IS NOT NULL\n    AND DATE(n.created_at) >= sm.d\n    AND EXISTS (\n      SELECT 1\n      FROM orders o\n      WHERE o.merchant_id = n.merchant_id\n        AND DATE(o.sorted_at) >= sm.d\n    )\n),\n\ntotal AS (\n  SELECT \n    'Total Onboarded' AS metric,\n    COUNT(*) AS value\n  FROM new_onboards n\n  CROSS JOIN start_month sm\n  WHERE n.onboard_type = 'Organic'\n    AND DATE(n.created_at) >= sm.d\n)\n\nSELECT * FROM total\nUNION ALL\nSELECT * FROM first_trip;\n"
+  },
+  {
+    "id": 2050,
+    "name": "Forecast Orders",
+    "display": "table",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "table.pivot_column": "Overall_Daily_Average_Orders",
+      "table.cell_column": "Overall_Monthly_Forecast",
+      "table.column_formatting": [
+        {
+          "columns": [],
+          "type": "single",
+          "operator": "not-null",
+          "value": "",
+          "color": "#C8B4DA",
+          "highlight_row": true
+        },
+        {
+          "columns": [
+            "forecast"
+          ],
+          "type": "single",
+          "operator": ">",
+          "value": 0,
+          "color": "#87BCEC",
+          "highlight_row": true
+        }
+      ],
+      "table.columns": [
+        {
+          "name": "id",
+          "enabled": true
+        },
+        {
+          "name": "created_at",
+          "enabled": true
+        },
+        {
+          "name": "updated_at",
+          "enabled": true
+        },
+        {
+          "name": "kam_id",
+          "enabled": true
+        },
+        {
+          "name": "target",
+          "enabled": true
+        },
+        {
+          "name": "revenue",
+          "enabled": true
+        }
+      ],
+      "column_settings": {
+        "[\"name\",\"daily_average\"]": {
+          "decimals": 0
+        },
+        "[\"name\",\"forecast\"]": {
+          "decimals": 0
+        },
+        "[\"name\",\"run_rate\"]": {
+          "show_mini_bar": true,
+          "number_style": "percent"
+        }
+      }
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH\ndate_bounds AS (\n  SELECT\n    DATE_ADD(DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH), INTERVAL 15 DAY) AS win_start,\n    DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)                            AS win_end,\n    DATE_TRUNC(CURRENT_DATE(), MONTH)                                                         AS this_month_start,\n    CURRENT_DATE()                                                                             AS today\n),\n\nnew_onboards AS (\n  SELECT\n    id, merchant_id, phone, created_at, onboard_type, business_team_user_id\n  FROM `courier_appsmith.new_onboards`\n  CROSS JOIN date_bounds db\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS DISTINCT FROM TRUE   -- avoids NULL mis-filter vs <> TRUE\n    AND status <> 'Inactive'\n    AND (\n      onboard_type <> 'Organic'\n      OR DATE(created_at) >= db.win_start AND DATE(created_at) < db.win_end\n    )\n),\n\n-- \u2500\u2500 Replace OR-join with UNION ALL so BigQuery can use hash joins \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nmerchants_by_id AS (\n  SELECT m.id, m.phone, m.name, DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  JOIN new_onboards nob ON m.id = nob.merchant_id          -- merchant_id path\n  WHERE m.updated_at IS NOT NULL AND m.kam_id IS NULL AND nob.merchant_id IS NOT NULL\n),\n\nmerchants_by_phone AS (\n  SELECT m.id, m.phone, m.name, DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  JOIN new_onboards nob ON m.phone = nob.phone              -- phone fallback\n  WHERE m.updated_at IS NOT NULL AND m.kam_id IS NULL AND nob.merchant_id IS NULL\n),\n\nmerchants AS (\n  SELECT * FROM merchants_by_id\n  UNION ALL\n  SELECT * FROM merchants_by_phone\n),\n\n-- \u2500\u2500 Narrow scan: only columns + date range needed for monthly metrics \u2500\u2500\u2500\u2500\u2500\u2500\norders_this_month AS (\n  SELECT merchant_id, transfer_status_id, final_fee\n  FROM `courier_realtime_datastream.public_orders`\n  CROSS JOIN date_bounds db\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n    AND DATE(sorted_at) >= db.this_month_start\n    AND DATE(sorted_at) <  db.today\n),\n\n-- \u2500\u2500 Narrow scan: only columns needed for first-order detection \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\norders_all AS (\n  SELECT merchant_id, created_at\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\tUNION ALL \n\t  SELECT merchant_id, created_at\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\n\nfirst_orders AS (\n  SELECT\n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders_all o\n    ON m.id = o.merchant_id\n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n\norders_month AS (\n  SELECT\n    merchant_id,\n    COUNTIF(transfer_status_id IN ({{snippet: processed_orders}}))  AS processed,\n    SUM(\n      CASE WHEN transfer_status_id IN ({{snippet: processed_orders}})\n           THEN final_fee / 100.0 ELSE 0 END\n    ) AS revenue\n  FROM orders_this_month\n  GROUP BY merchant_id\n),\n\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0) AS processed,\n    COALESCE(om.revenue, 0)   AS revenue\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.id = m.id\n  LEFT JOIN orders_month om ON om.merchant_id = m.id\n),\n\n-- \u2500\u2500 Replace OR-join with UNION ALL \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\njoined_onboards AS (\n  SELECT n.onboard_type, n.created_at, f.processed, f.revenue,\n         f.first_order_date_after_lead_creation\n  FROM new_onboards n\n  LEFT JOIN final f ON f.merchant_id = n.merchant_id\n  WHERE n.merchant_id IS NOT NULL\n\n  UNION ALL\n\n  SELECT n.onboard_type, n.created_at, f.processed, f.revenue,\n         f.first_order_date_after_lead_creation\n  FROM new_onboards n\n  LEFT JOIN final f ON f.phone = n.phone\n  WHERE n.merchant_id IS NULL\n),\n\ntotal_processed AS (\n  SELECT\n    SUM(COALESCE(j.processed, 0)) AS total_processed,\n    SUM(COALESCE(j.revenue, 0))   AS total_revenue\n  FROM joined_onboards j\n  CROSS JOIN date_bounds db\n  WHERE\n    j.onboard_type = 'Post Corporate'\n    OR (j.onboard_type = 'Organic'\n          AND DATE(j.created_at) >= db.win_start\n          AND DATE(j.created_at) <  db.win_end)\n    OR (j.onboard_type <> 'Organic'\n          AND j.first_order_date_after_lead_creation >= db.win_start\n          AND j.first_order_date_after_lead_creation <  db.win_end)\n),\n\ndays_in_month AS (\n  SELECT\n    EXTRACT(DAY FROM CURRENT_DATE()) - 1                                                                   AS days_passed,\n    EXTRACT(DAY FROM DATE_TRUNC(CURRENT_DATE(), MONTH) + INTERVAL 1 MONTH - INTERVAL 1 DAY) AS total_days_in_month\n),\n\nforecast_calculation AS (\n  SELECT\n    tp.total_processed,\n    tp.total_revenue,\n    dm.days_passed,\n    dm.total_days_in_month,\n    SAFE_DIVIDE(tp.total_processed, dm.days_passed)                                   AS daily_average,\n    SAFE_MULTIPLY(SAFE_DIVIDE(tp.total_processed, dm.days_passed), dm.total_days_in_month) AS forecast,\n    SAFE_DIVIDE(tp.total_revenue, dm.days_passed)                                     AS daily_average_revenue,\n    SAFE_MULTIPLY(SAFE_DIVIDE(tp.total_revenue, dm.days_passed), dm.total_days_in_month)   AS forecast_revenue\n  FROM total_processed tp\n  CROSS JOIN days_in_month dm\n)\n\n-- \u2500\u2500 Replace correlated subquery with a JOIN \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nSELECT\n  fc.total_processed,\n  fc.daily_average,\n  fc.forecast,\n  SAFE_DIVIDE(fc.forecast, t.targets) AS run_rate,\n  fc.total_revenue,\n  fc.daily_average_revenue,\n  fc.forecast_revenue\nFROM forecast_calculation fc\nCROSS JOIN date_bounds db\nLEFT JOIN `hermes_bz_comms.business_team_targets` t\n  ON t.team_name       = 'ACQ'\n  AND t.start_of_month = db.this_month_start;"
+  },
+  {
+    "id": 2158,
+    "name": "Total Leads Rejected",
+    "display": "scalar",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": null,
+    "visualization_settings": {},
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  SELECT *\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\tUNION ALL \n\t  SELECT *\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\nnew_onboards as (\n\tselect * \n\tfrom courier_appsmith.new_onboards\n\twhere business_team_user_id <> '1'\n\tand status = 'Inactive'\n\t    and is_deleted <> true\n\n),\nmerchants AS (\n  SELECT *\n  FROM `courier_realtime_datastream.public_merchants`\n  WHERE updated_at IS NOT NULL\n    -- AND phone IN (SELECT phone FROM new_onboards)\n),\n\n/* Aggregate orders for the current month per merchant */\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(o.transfer_status_id IN (8,9,10,11,12,13,22,23,24,26,28,25,14,30,31,32,33,36,37,38,39,40,41,42)) AS processed,\n    (\n      SUM(\n        IF(\n          o.transfer_status_id IN (8,9,10,11,12,13,22,23,24,26,28,25,14,30,31,32,33,36,37,38,39,40,41,42),\n          (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n          - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n          0\n        )\n      ) / 100\n      +\n      SUM(\n        IF(\n          o.transfer_status_id IN (8,9,10,11,12,13,22,23,24,26,28,25,14,30,31,32,33,36,37,38,39,40,41,42),\n          COALESCE(o.cash_on_delivery_fee,0),\n          0\n        )\n      ) / 100\n    ) AS expected_rvn_all\n  FROM orders o\n  WHERE DATE(o.sorted_at) >= DATE_TRUNC(CURRENT_DATE(), MONTH)\n    AND DATE(o.sorted_at) <= CURRENT_DATE() \n  GROUP BY o.merchant_id\n),\n/* Keep all merchants; fill zeros when no orders */\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    COALESCE(om.processed, 0)        AS processed,\n    COALESCE(om.expected_rvn_all, 0) AS expected_rvn_all\n  FROM merchants m\n  LEFT JOIN orders_month om\n    ON om.merchant_id = m.id\n)\n\n/* Detail rows (merchant_id cast to STRING to match total row) */\nSELECT\n \t count(n.id)\nFROM new_onboards n\n\nLEFT JOIN final f\n\n  ON (\n    (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n    OR (n.merchant_id IS NULL AND f.phone = n.phone)\n  )\nLEFT JOIN `courier_appsmith.business_team_users` btu\n  ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\nWHERE 1=1\n  [[AND {{current_month}} = 'Yes' AND DATE(n.created_at) >= DATE_TRUNC(DATE(CURRENT_DATE()), MONTH)]]\n  [[AND date(n.created_at) >= {{start_date}}]]\n  [[AND date(n.created_at) <= {{end_date}}]]\n"
+  },
+  {
+    "id": 2260,
+    "name": "Team Wise Distribution [Orders]",
+    "display": "pie",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 50,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "pie.percent_visibility": "legend",
+      "pie.dimension": [
+        "team_name"
+      ],
+      "pie.show_labels": true,
+      "pie.rows": [
+        {
+          "key": "KAM",
+          "name": "KAM",
+          "originalName": "KAM",
+          "color": "#7172AD",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Acquisition",
+          "name": "Acquisition",
+          "originalName": "Acquisition",
+          "color": "#EF8C8C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Pre Corporate",
+          "name": "Corporate",
+          "originalName": "Pre Corporate",
+          "color": "#509EE3",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        }
+      ],
+      "pie.metric": "Processed",
+      "pie.show_legend": true,
+      "pie.decimal_places": 2,
+      "pie.show_total": true,
+      "version": 2
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  SELECT *\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\tUNION ALL \n\t  SELECT *\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\nnew_onboards AS (\n  SELECT * \n  FROM `courier_appsmith.new_onboards`\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS NOT TRUE\n    AND status <> 'Inactive'\n),\nmerchants AS (\n  SELECT m.*, DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  LEFT JOIN new_onboards nob\n    ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n    AND nob.created_at IS NOT NULL \n    AND m.kam_id IS NULL\n),\n-- First order date after lead creation\nfirst_orders AS (\n  SELECT \n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n   AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n-- Orders aggregated (current month, excluding today)\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(o.transfer_status_id IN ({{snippet: processed_orders}})) AS processed,\n    (\n      SUM(\n        IF(\n          o.transfer_status_id IN ({{snippet: processed_orders}}),\n          (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n          - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n          0\n        )\n      ) / 100\n      +\n      SUM(\n        IF(\n          o.transfer_status_id IN ({{snippet: processed_orders}}),\n          COALESCE(o.cash_on_delivery_fee,0),\n          0\n        )\n      ) / 100\n    ) AS expected_rvn_all\n  FROM orders o\n  WHERE DATE(o.sorted_at) >= DATE_TRUNC(CURRENT_DATE(), MONTH)\n    AND DATE(o.sorted_at) < CURRENT_DATE()           -- excludes today\n  GROUP BY o.merchant_id\n),\n-- Combine merchants with order summary\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0)        AS processed,\n    COALESCE(om.expected_rvn_all, 0) AS expected_rvn_all\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.id = m.id\n  LEFT JOIN orders_month om ON om.merchant_id = m.id\n),\n-- Per-acquisition member stats (same logic as your query)\ndetails AS (\n  SELECT\n    btu.user_name AS Acq_Name,\n    bt.team_name  AS team_name,\n    SUM(f.processed)        AS Processed,\n    SUM(f.expected_rvn_all) AS Expected_Revenue,\n    COUNT(DISTINCT f.merchant_id) AS Merchant_Count,\n    SUM(\n      CASE\n        WHEN n.onboard_type = 'Post Corporate' THEN 0\n        WHEN n.onboard_type = 'Organic'        THEN 0.005 * f.expected_rvn_all\n        ELSE                                        0.02  * f.expected_rvn_all\n      END\n    ) AS KPI_Bonus\n  FROM new_onboards n\n  LEFT JOIN final f\n    ON (\n      (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n      OR (n.merchant_id IS NULL AND f.phone = n.phone)\n    )\n  LEFT JOIN `courier_appsmith.business_team_users` btu\n    ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\n  LEFT JOIN courier_appsmith.business_team bt \n    ON bt.id = btu.team_id\n  WHERE\n    (n.onboard_type = 'Post Corporate'\n    -- Logic 1: For Organic, use n.created_at in current month\n    or (n.onboard_type = 'Organic' \n     AND DATE(n.created_at) >=  DATE_ADD(\n      DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n      INTERVAL 15 DAY)\nAND DATE(n.created_at) < DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n\n    )\n    OR\n    -- Logic 2: For others, use first_order_date from (current_month - 15 days) to current month end\n    (n.onboard_type != 'Organic'\n     AND f.first_order_date_after_lead_creation >=  DATE_ADD(\n      DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n      INTERVAL 15 DAY)\n     AND f.first_order_date_after_lead_creation <  DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n    )\n  )\n    [[AND f.merchant_id = {{merchant_ID}}]]\n    [[AND btu.user_name  = {{Acq_Member_Name}}]]\n    [[AND n.onboard_type = {{onboard_type}}]]\n    [[AND bt.team_name IN ({{team_name}})]]\n  GROUP BY btu.user_name, bt.team_name\n),\n-- >>> Team-wise rollup <<<\nteam_summary AS (\n  SELECT\n    COALESCE(team_name, 'Unassigned') AS team_name,\n    ROUND(SUM(Processed),0)   AS Processed,\n\tROUND(sum(Expected_Revenue),0) as revenue,\n    ROUND(SUM(KPI_Bonus),0)   AS KPI_Bonus \n  FROM details\n  GROUP BY team_name\n)\nselect * \nfrom team_summary \n"
+  },
+  {
+    "id": 2262,
+    "name": "Order Trend CRM ",
+    "display": "area",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 50,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "graph.show_trendline": false,
+      "graph.show_values": true,
+      "graph.x_axis.labels_enabled": true,
+      "pie.dimension": [
+        "Status"
+      ],
+      "table.cell_column": "processed",
+      "graph.series_order_dimension": null,
+      "pie.show_labels": false,
+      "graph.x_axis.axis_enabled": "compact",
+      "graph.y_axis.labels_enabled": true,
+      "graph.label_value_frequency": "fit",
+      "pie.rows": [
+        {
+          "key": "Info Pending",
+          "name": "Info Pending",
+          "originalName": "Info Pending",
+          "color": "#E75454",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "First Order Pending",
+          "name": "First Order Pending",
+          "originalName": "First Order Pending",
+          "color": "#ED8535",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Incubation",
+          "name": "Incubation",
+          "originalName": "Incubation",
+          "color": "#88BF4D",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Churn",
+          "name": "Churn",
+          "originalName": "Churn",
+          "color": "#F9D45C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        },
+        {
+          "key": "Hunt",
+          "name": "Hunt",
+          "originalName": "Hunt",
+          "color": "#98D9D9",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        }
+      ],
+      "graph.metrics": [
+        "total_processed",
+        "Merchant_Count"
+      ],
+      "graph.y_axis.axis_enabled": false,
+      "table.column_formatting": [
+        {
+          "columns": [
+            "processed"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        }
+      ],
+      "graph.label_value_formatting": "compact",
+      "graph.series_order": null,
+      "pie.metric": "estimated_volume",
+      "pie.decimal_places": 1,
+      "table.pivot_column": "merchant_name",
+      "series_settings": {
+        "total_processed": {
+          "line.interpolate": "cardinal",
+          "color": "#EF8C8C",
+          "line.style": "solid",
+          "line.size": "M",
+          "line.marker_enabled": null,
+          "line.missing": "zero",
+          "display": "bar"
+        },
+        "Merchant_Count": {
+          "line.interpolate": "cardinal",
+          "display": "line",
+          "axis": "right"
+        }
+      },
+      "graph.y_axis.auto_range": true,
+      "graph.x_axis.scale": "timeseries",
+      "graph.dimensions": [
+        "order_date"
+      ]
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  SELECT *\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\tUNION ALL\n\t  SELECT *\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\nnew_onboards AS (\n  SELECT * \n  FROM `courier_appsmith.new_onboards`\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS NOT TRUE\n    AND status <> 'Inactive'\n),\nmerchants AS (\n  SELECT m.*, date(nob.created_at) as leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  left join new_onboards nob\n  ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n  and nob.created_at is not null \n  and m.kam_id is null\n),\n/* ADD: Calculate first order date after lead creation */\nfirst_orders AS (\n  SELECT \n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n/* Daily order aggregation per merchant */\norders_day AS (\n  SELECT\n    o.merchant_id,\n    DATE(o.sorted_at) AS order_date,\n    COUNTIF(o.transfer_status_id IN ({{snippet: processed_orders}})) AS processed\n  FROM orders o\n  WHERE DATE(o.sorted_at) >= DATE_TRUNC(CURRENT_DATE(), MONTH)\n    AND DATE(o.sorted_at) < CURRENT_DATE()\n  GROUP BY 1, 2\n),\n/* Join with merchants */\nfinal AS (\n  SELECT\n    m.id AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,  /* ADD */\n    fo.first_order_date_after_lead_creation,  /* ADD */\n    f.order_date,\n    COALESCE(f.processed, 0) AS processed\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.id = m.id  /* ADD */\n  LEFT JOIN orders_day f\n    ON f.merchant_id = m.id\n)\n/* Day-on-day processed order summary for current month */\nSELECT\n  f.order_date,\n  SUM(f.processed) AS total_processed,\n  count(distinct f.merchant_id) as Merchant_Count\nFROM new_onboards n\nLEFT JOIN final f\n  ON (\n    (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n    OR (n.merchant_id IS NULL AND f.phone = n.phone)\n  )\nLEFT JOIN `courier_appsmith.business_team_users` btu\n  ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\nWHERE 1=1\n  /* ADD THE PREVIOUS FILTERING LOGIC */\n  AND (n.onboard_type = 'Post Corporate'\n    -- Logic 1: For Organic, use n.created_at in current month\n    or (n.onboard_type = 'Organic' \n     AND DATE(n.created_at) >=  DATE_ADD(\n      DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n      INTERVAL 15 DAY)\nAND DATE(n.created_at) < DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n\n    )\n    OR\n    -- Logic 2: For others, use first_order_date from (current_month - 15 days) to current month end\n    (n.onboard_type != 'Organic'\n     AND f.first_order_date_after_lead_creation >=  DATE_ADD(\n      DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n      INTERVAL 15 DAY)\n     AND f.first_order_date_after_lead_creation <  DATE_TRUNC(DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH)\n    )\n  )\n  AND f.order_date is not null\nGROUP BY f.order_date\nORDER BY f.order_date;"
+  },
+  {
+    "id": 2030,
+    "name": "Performance Tracker",
+    "display": "table",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": 154,
+    "visualization_settings": {
+      "table.pivot_column": "user_name",
+      "table.cell_column": "Total Assign",
+      "table.column_formatting": [
+        {
+          "columns": [],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "user_name"
+          ],
+          "type": "single",
+          "operator": "=",
+          "value": "Total",
+          "color": "#509EE3",
+          "highlight_row": true
+        }
+      ],
+      "table.columns": [
+        {
+          "name": "user_name",
+          "enabled": true
+        },
+        {
+          "name": "Total Assign",
+          "enabled": true
+        },
+        {
+          "name": "First Trip",
+          "enabled": true
+        },
+        {
+          "name": "reject_lead",
+          "enabled": true
+        },
+        {
+          "name": "% First Trip",
+          "enabled": true
+        },
+        {
+          "name": "Texted",
+          "enabled": true
+        },
+        {
+          "name": "Called",
+          "enabled": true
+        },
+        {
+          "name": "Text Remaining",
+          "enabled": true
+        },
+        {
+          "name": "total_row_flag",
+          "enabled": false
+        },
+        {
+          "name": "Call Remaining",
+          "enabled": true
+        }
+      ],
+      "column_settings": {
+        "[\"name\",\"% First Trip\"]": {
+          "number_style": "percent"
+        }
+      }
+    },
+    "parameters": [],
+    "native_sql": "-- Standard SQL (BigQuery)\nWITH start_month AS (\n  SELECT DATE_TRUNC(CURRENT_DATE(), MONTH) AS d\n),\n\norders AS (\n  SELECT *\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n  UNION ALL\n  SELECT *\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\n\n-- First-trip counts per business_team_user_id for the period\nfirst_trip AS (\n  SELECT\n    CAST(n.business_team_user_id AS INT64) AS business_team_user_id,\n    COUNT(DISTINCT n.merchant_id) AS merchant_count\n  FROM `courier_appsmith.new_onboards` AS n\n  CROSS JOIN start_month sm\n  WHERE n.onboard_type = 'Organic'\n  \tand n.is_deleted <> true\n    AND DATE(n.created_at) >= sm.d\n    AND EXISTS (\n      SELECT 1\n      FROM orders o\n      WHERE o.merchant_id = n.merchant_id\n        AND DATE(o.sorted_at) >= sm.d\n    )\n  GROUP BY business_team_user_id\n)\n\n-- Total row\nSELECT\n  'Total' AS user_name,\n  COUNT(nob.id) AS `Total Assign`,\n  COUNTIF(nob.status = 'Inactive') AS reject_lead,\n  COUNTIF(nob.text_status = 'YES') AS `Texted`,\n  COUNTIF(nob.call_status = 'YES') AS `Called`,\n  COUNT(*) - COUNTIF(nob.text_status = 'YES') AS `Text Remaining`,\n  COUNT(*) - COUNTIF(nob.call_status = 'YES') AS `Call Remaining`,\n  (\n    SELECT COUNT(DISTINCT n.merchant_id)\n    FROM `courier_appsmith.new_onboards` n\n    CROSS JOIN start_month sm\n    WHERE n.onboard_type = 'Organic'\n      AND n.business_team_user_id IS NOT NULL\n\t  \tand business_team_user_id <> '1'\n    and is_deleted <> true\n      AND DATE(n.created_at) >= sm.d\n      AND EXISTS (\n        SELECT 1 FROM orders o\n        WHERE o.merchant_id = n.merchant_id\n          AND DATE(o.sorted_at) >= sm.d\n      )\n  ) AS `First Trip`,\n  SAFE_DIVIDE(\n    CAST((\n      SELECT COUNT(DISTINCT n.merchant_id)\n      FROM `courier_appsmith.new_onboards` n\n      CROSS JOIN start_month sm\n      WHERE n.onboard_type = 'Organic'\n        AND n.business_team_user_id IS NOT NULL\n        AND DATE(n.created_at) >= sm.d\n        AND EXISTS (\n          SELECT 1 FROM orders o\n          WHERE o.merchant_id = n.merchant_id\n            AND DATE(o.sorted_at) >= sm.d\n        )\n    ) AS FLOAT64),\n    NULLIF(CAST(COUNT(nob.id) AS FLOAT64), 0)\n  ) AS `% First Trip`,\n  1 AS total_row_flag\nFROM `courier_appsmith.new_onboards` AS nob\nCROSS JOIN start_month sm\nLEFT JOIN `courier_appsmith.business_team_users` AS btu\n  ON btu.id = CAST(nob.business_team_user_id AS INT64)\nWHERE DATE(nob.created_at) >= sm.d\nand nob.is_deleted <> true\n  AND nob.onboard_type = 'Organic'\n\nUNION ALL\n\n-- Per-user rows\nSELECT\n  COALESCE(btu.user_name, 'Unassigned') AS user_name,\n  COUNT(nob.id) AS `Total Assign`,\n  COUNTIF(nob.status = 'Inactive') AS reject_lead,\n  COUNTIF(nob.text_status = 'YES') AS `Texted`,\n  COUNTIF(nob.call_status = 'YES') AS `Called`,\n  COUNT(*) - COUNTIF(nob.text_status = 'YES') AS `Text Remaining`,\n  COUNT(*) - COUNTIF(nob.call_status = 'YES') AS `Call Remaining`,\n  COALESCE(ft.merchant_count, 0) AS `First Trip`,\n  SAFE_DIVIDE(\n    CAST(COALESCE(ft.merchant_count, 0) AS FLOAT64),\n    NULLIF(CAST(COUNT(nob.id) AS FLOAT64), 0)\n  ) AS `% First Trip`,\n  0 AS total_row_flag\nFROM `courier_appsmith.new_onboards` AS nob\nCROSS JOIN start_month sm\nLEFT JOIN `courier_appsmith.business_team_users` AS btu\n  ON btu.id = CAST(nob.business_team_user_id AS INT64)\nLEFT JOIN first_trip ft\n  ON ft.business_team_user_id = CAST(nob.business_team_user_id AS INT64)\nWHERE DATE(nob.created_at) >= sm.d\n  AND nob.onboard_type = 'Organic'\nGROUP BY user_name, ft.merchant_count\n\nORDER BY total_row_flag DESC, `Total Assign` DESC;\n"
+  },
+  {
+    "id": 2060,
+    "name": "Sales Overview [Merchants Specific]",
+    "display": "table",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "table.columns": [
+        {
+          "name": "merchant_id",
+          "enabled": true
+        },
+        {
+          "name": "business_name",
+          "enabled": true
+        },
+        {
+          "name": "Acq_Name",
+          "enabled": true
+        },
+        {
+          "name": "Team_name",
+          "enabled": true
+        },
+        {
+          "name": "onboard_type",
+          "enabled": true
+        },
+        {
+          "name": "phone",
+          "enabled": true
+        },
+        {
+          "name": "leads_created_at",
+          "enabled": true
+        },
+        {
+          "name": "first_order_date_after_lead_creation",
+          "enabled": true
+        },
+        {
+          "name": "Processed",
+          "enabled": true
+        },
+        {
+          "name": "Expected_Revenue",
+          "enabled": true
+        },
+        {
+          "name": "Last_Day_Orders",
+          "enabled": true
+        },
+        {
+          "name": "Active_Days",
+          "enabled": true
+        },
+        {
+          "name": "Avg_Daily_Orders",
+          "enabled": true
+        },
+        {
+          "name": "estimated_volume",
+          "enabled": true
+        },
+        {
+          "name": "cases",
+          "enabled": false
+        },
+        {
+          "name": "KPI_Bonus",
+          "enabled": true
+        }
+      ],
+      "pie.dimension": [
+        "Status"
+      ],
+      "table.cell_column": "processed",
+      "pie.show_labels": false,
+      "pie.rows": [
+        {
+          "key": "Info Pending",
+          "name": "Info Pending",
+          "originalName": "Info Pending",
+          "color": "#E75454",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "First Order Pending",
+          "name": "First Order Pending",
+          "originalName": "First Order Pending",
+          "color": "#ED8535",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Incubation",
+          "name": "Incubation",
+          "originalName": "Incubation",
+          "color": "#88BF4D",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Churn",
+          "name": "Churn",
+          "originalName": "Churn",
+          "color": "#F9D45C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        },
+        {
+          "key": "Hunt",
+          "name": "Hunt",
+          "originalName": "Hunt",
+          "color": "#98D9D9",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        }
+      ],
+      "table.column_formatting": [
+        {
+          "columns": [
+            "cases"
+          ],
+          "type": "single",
+          "operator": "=",
+          "value": "Low",
+          "color": "#EF8C8C",
+          "highlight_row": true
+        },
+        {
+          "columns": [
+            "merchant_id"
+          ],
+          "type": "single",
+          "operator": "=",
+          "value": "TOTAL",
+          "color": "#509EE3",
+          "highlight_row": true
+        }
+      ],
+      "table.row_index": false,
+      "pie.metric": "estimated_volume",
+      "pie.decimal_places": 1,
+      "table.pivot_column": "merchant_name",
+      "column_settings": {
+        "[\"name\",\"Expected_Revenue\"]": {
+          "decimals": 0
+        }
+      }
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  -- Narrow to only needed columns\n  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\tUNION ALL \n\tSELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\n\n/* Core filters for new_onboards, reused */\nnew_onboards AS (\n  SELECT \n    business_team_user_id,\n    merchant_id,\n    phone,\n    is_deleted,\n    status,\n    onboard_type,\n    estimated_volume,\n    created_at,\n    business_name\n  FROM courier_appsmith.new_onboards\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS NOT TRUE\n    AND status <> 'Inactive'\n    AND created_at IS NOT NULL\n),\n\n/*\n  Pre-filter new_onboards once (same logic as Query 1):\n\n  - Post Corporate: keep all\n  - Organic: created_at in window [15th of last month, end of current month)\n  - Others: kept; they will be filtered later via first_order_date_after_lead_creation\n*/\nfiltered_new_onboards AS (\n  SELECT *\n  FROM new_onboards n\n  WHERE\n    n.onboard_type = 'Post Corporate'\n    OR (\n      n.onboard_type = 'Organic'\n      AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n      AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH),\n            MONTH\n          )\n    )\n    OR (n.onboard_type != 'Organic' AND n.onboard_type != 'Post Corporate')\n),\n\n/* Merchants keyed off filtered_new_onboards (same pattern as Query 1) */\nmerchants AS (\n  SELECT\n    m.*,\n    DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  INNER JOIN filtered_new_onboards nob\n    ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n    AND m.kam_id IS NULL\n),\n\n/* Calculate first order date after lead creation */\nfirst_orders AS (\n  SELECT \n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n\n/* Anchor: yesterday is always the \"last day\" */\nlast_day AS (\n  SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY) AS d\n),\n\n/* Daily processed counts for the current month (up to yesterday) */\ndaily_orders AS (\n  SELECT\n    o.merchant_id,\n    DATE(o.sorted_at) AS order_date,\n    COUNTIF(\n      o.transfer_status_id IN (\n{{snippet: processed_orders}}\n      )\n    ) AS processed\n  FROM orders o\nWHERE sorted_at >= TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), MONTH)\n  AND sorted_at <  TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), DAY)\n  GROUP BY 1,2\n),\n\n/* Per-merchant extras:\n   - processed_month    = MTD processed\n   - last_day_processed = orders on yesterday\n   - active_days        = count of unique order days (includes yesterday)\n   - avg_daily_orders   = avg over days strictly BEFORE yesterday\n*/\norders_extras AS (\n  SELECT\n    d.merchant_id,\n    SUM(d.processed) AS processed_month,\n    SUM(\n      CASE\n        WHEN d.order_date = (SELECT d FROM last_day) THEN d.processed\n        ELSE 0\n      END\n    ) AS last_day_processed,\n    COUNT(DISTINCT d.order_date) AS active_days,\n    SAFE_DIVIDE(\n      SUM(CASE WHEN d.order_date < (SELECT d FROM last_day) THEN d.processed ELSE 0 END),\n      COUNT(DISTINCT CASE WHEN d.order_date < (SELECT d FROM last_day) THEN d.order_date END)\n    ) AS avg_daily_orders\n  FROM daily_orders d\n  GROUP BY 1\n),\n\n/* Aggregate orders for the current month per merchant (processed + expected revenue) */\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(\n      o.transfer_status_id IN (\n{{snippet: processed_orders}}\n      )\n    ) AS processed,\n    (\n      SUM(\n        IF(\n          o.transfer_status_id IN (\n{{snippet: processed_orders}}\n          ),\n          (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n          - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n          0\n        )\n      ) / 100\n      +\n      SUM(\n        IF(\n          o.transfer_status_id IN (\n    {{snippet: processed_orders}}\n          ),\n          COALESCE(o.cash_on_delivery_fee,0),\n          0\n        )\n      ) / 100\n    ) AS expected_rvn_all\n  FROM orders o\n  WHERE o.sorted_at >= TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), MONTH)\n    AND o.sorted_at <  TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), DAY)   -- excludes today\n  GROUP BY o.merchant_id\n),\n\n/* Keep all merchants; attach last-day + avg + active days; fill zeros when missing */\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0)          AS processed,\n    COALESCE(om.expected_rvn_all, 0)   AS expected_rvn_all,\n    COALESCE(oe.last_day_processed, 0) AS last_day_orders,   -- yesterday only\n    COALESCE(oe.active_days, 0)        AS active_days,       -- includes yesterday\n    COALESCE(oe.avg_daily_orders, 0)   AS avg_daily_orders   -- excludes yesterday & today\n  FROM merchants m\n  LEFT JOIN first_orders fo  ON fo.id          = m.id\n  LEFT JOIN orders_month om  ON om.merchant_id = m.id\n  LEFT JOIN orders_extras oe ON oe.merchant_id = m.id\n),\n\n/* Build detail rows once */\ndetails AS (\n  SELECT\n    CAST(f.merchant_id AS STRING) AS merchant_id,\n    COALESCE(f.merchant_name, n.business_name) AS business_name,\n    btu.user_name AS Acq_Name,\n\tbt.team_name as Team_name,\n    n.onboard_type AS onboard_type,\n    n.phone AS phone,\n    n.estimated_volume,\n    f.leads_created_at,\n    f.first_order_date_after_lead_creation,\n\n    /* roll-ups from merchant-level 'final' */\n    SUM(f.processed)        AS Processed,\n    SUM(f.expected_rvn_all) AS Expected_Revenue,\n    SUM(f.last_day_orders)  AS Last_Day_Orders,\n    SUM(f.active_days)      AS Active_Days,\n    ROUND(AVG(f.avg_daily_orders), 2) AS Avg_Daily_Orders,\n\n    CASE\n      WHEN n.onboard_type = 'Post Corporate' THEN 0\n      WHEN n.onboard_type = 'Organic'        THEN 0.005 * SUM(f.expected_rvn_all)\n      ELSE                                        0.02  * SUM(f.expected_rvn_all)\n    END AS KPI_Bonus\n  FROM filtered_new_onboards n\n  LEFT JOIN final f\n    ON (\n      (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n      OR (n.merchant_id IS NULL AND f.phone = n.phone)\n    )\n  LEFT JOIN `courier_appsmith.business_team_users` btu\n    ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\n\t  LEFT JOIN courier_appsmith.business_team bt\n    ON bt.id = btu.team_id\n  WHERE 1=1\n    AND (\n      -- 1) Post Corporate: lifetime, no date filters\n      n.onboard_type = 'Post Corporate'\n      -- 2) Organic: same window as Query 1 (15th last month \u2192 end of current month)\n      OR (\n        n.onboard_type = 'Organic'\n        AND DATE(n.created_at) >= DATE_ADD(\n              DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n              INTERVAL 15 DAY\n            )\n        AND DATE(n.created_at) < DATE_TRUNC(\n              DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH),\n              MONTH\n            )\n      )\n      -- 3) Others (incl. PC if applicable): filtered by first_order_date in same window\n      OR (\n        n.onboard_type != 'Organic'\n        AND f.first_order_date_after_lead_creation >= DATE_ADD(\n              DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n              INTERVAL 15 DAY\n            )\n        AND f.first_order_date_after_lead_creation < DATE_TRUNC(\n              DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH),\n              MONTH\n            )\n      )\n    )\n    [[AND f.merchant_id = {{merchant_ID}}]]\n    [[AND btu.user_name  = {{Acq_Member_Name}}]]\n    [[AND n.onboard_type = {{onboard_type}}]]\n\t[[AND bt.team_name = {{Team_name}}]]\n\t[[AND (\n    ({{last_day_order}} = '0 Orders' AND last_day_orders = 0)\n    OR\n    ({{last_day_order}} = 'Has Orders' AND last_day_orders > 0)\n)]]\n  GROUP BY\n    merchant_id,\n    business_name,\n    Acq_Name,\n\tTeam_name,\n    onboard_type,\n    phone,\n    leads_created_at,\n    first_order_date_after_lead_creation,\n    estimated_volume\n)\n\n-- Final output: details + TOTAL derived from details\nSELECT *,\n  CASE\n    WHEN merchant_id = 'TOTAL' THEN NULL\n    WHEN Last_Day_Orders < Avg_Daily_Orders THEN 'Low'\n    ELSE 'High'\n  END AS cases\nFROM (\n\n  SELECT\n    merchant_id,\n    business_name,\n    Acq_Name,\n    Team_name,\n    onboard_type,\n    phone,\n    leads_created_at,\n    first_order_date_after_lead_creation,\n    Processed,\n    Expected_Revenue,\n    Last_Day_Orders,\n    Active_Days,\n    Avg_Daily_Orders,\n    estimated_volume,\n    KPI_Bonus\n  FROM details\n\n  UNION ALL\n\n  SELECT\n    'TOTAL' AS merchant_id,\n    NULL    AS business_name,\n    NULL    AS Acq_Name,\n    NULL    AS Team_name,\n    NULL    AS onboard_type,\n    NULL    AS phone,\n    NULL    AS leads_created_at,\n    NULL    AS first_order_date_after_lead_creation,\n    SUM(Processed)        AS Processed,\n    SUM(Expected_Revenue) AS Expected_Revenue,\n    NULL AS Last_Day_Orders,\n    NULL AS Active_Days,\n    NULL AS Avg_Daily_Orders,\n    NULL AS estimated_volume,\n    SUM(KPI_Bonus)        AS KPI_Bonus\n  FROM details\n\n) x\n\nORDER BY\n  CASE WHEN merchant_id = 'TOTAL' THEN 0 ELSE 1 END,\n  Processed DESC;"
+  },
+  {
+    "id": 2114,
+    "name": "Leaderboard",
+    "display": "table",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "table.columns": [
+        {
+          "name": "Rank",
+          "enabled": true
+        },
+        {
+          "name": "Acq_Name",
+          "enabled": true
+        },
+        {
+          "name": "team_name",
+          "enabled": true
+        },
+        {
+          "name": "Merchant_Count",
+          "enabled": true
+        },
+        {
+          "name": "Active_Merchant_Count",
+          "enabled": true
+        },
+        {
+          "name": "estimated_volume",
+          "enabled": true
+        },
+        {
+          "name": "Processed",
+          "enabled": true
+        },
+        {
+          "name": "order_remaining",
+          "enabled": true
+        },
+        {
+          "name": "crm_id",
+          "enabled": false
+        },
+        {
+          "name": "order_target",
+          "enabled": true
+        },
+        {
+          "name": "Order_Goal",
+          "enabled": true
+        },
+        {
+          "name": "Forecasted_Order",
+          "enabled": true
+        },
+        {
+          "name": "Expected_Revenue",
+          "enabled": true
+        },
+        {
+          "name": "revenue_remaining",
+          "enabled": true
+        },
+        {
+          "name": "revenue_goal",
+          "enabled": true
+        },
+        {
+          "name": "Forecasted_Revenue",
+          "enabled": true
+        },
+        {
+          "name": "KPI_Bonus",
+          "enabled": true
+        },
+        {
+          "name": "AOV",
+          "enabled": true
+        }
+      ],
+      "pie.dimension": [
+        "Status"
+      ],
+      "table.cell_column": "processed",
+      "pie.show_labels": false,
+      "pie.rows": [
+        {
+          "key": "Info Pending",
+          "name": "Info Pending",
+          "originalName": "Info Pending",
+          "color": "#E75454",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "First Order Pending",
+          "name": "First Order Pending",
+          "originalName": "First Order Pending",
+          "color": "#ED8535",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Incubation",
+          "name": "Incubation",
+          "originalName": "Incubation",
+          "color": "#88BF4D",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Churn",
+          "name": "Churn",
+          "originalName": "Churn",
+          "color": "#F9D45C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        },
+        {
+          "key": "Hunt",
+          "name": "Hunt",
+          "originalName": "Hunt",
+          "color": "#98D9D9",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        }
+      ],
+      "table.column_formatting": [
+        {
+          "columns": [
+            "revenue_goal"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "Order_Goal"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "Forecasted_Revenue"
+          ],
+          "type": "single",
+          "operator": "not-null",
+          "value": "",
+          "color": "#FBE499",
+          "highlight_row": false
+        },
+        {
+          "columns": [
+            "KPI_Bonus"
+          ],
+          "type": "single",
+          "operator": "not-null",
+          "value": "",
+          "color": "#999AC4",
+          "highlight_row": false
+        },
+        {
+          "columns": [],
+          "type": "range",
+          "colors": [
+            "white",
+            "#88BF4D"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "Acq_Name"
+          ],
+          "type": "single",
+          "operator": "=",
+          "value": "TOTAL",
+          "color": "#999AC4",
+          "highlight_row": true
+        }
+      ],
+      "table.row_index": false,
+      "pie.metric": "estimated_volume",
+      "pie.decimal_places": 1,
+      "table.pivot_column": "merchant_name",
+      "column_settings": {
+        "[\"name\",\"Expected_Revenue\"]": {
+          "decimals": 0
+        },
+        "[\"name\",\"Forecasted_Order\"]": {
+          "decimals": 0
+        },
+        "[\"name\",\"Forecasted_Revenue\"]": {
+          "decimals": 0
+        },
+        "[\"name\",\"KPI_Bonus\"]": {
+          "decimals": 0
+        },
+        "[\"name\",\"Order_Goal\"]": {
+          "show_mini_bar": false,
+          "number_style": "percent"
+        },
+        "[\"name\",\"revenue_goal\"]": {
+          "show_mini_bar": false,
+          "number_style": "percent"
+        }
+      }
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\nUNION ALL\n  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\t\n),\n\nnew_onboards AS (\n  SELECT \n    business_team_user_id,\n    merchant_id,\n    phone,\n    is_deleted,\n    status,\n    onboard_type,\n    estimated_volume,\n    created_at\n  FROM `courier_appsmith.new_onboards`\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS NOT TRUE\n    AND status <> 'Inactive'\n    AND created_at IS NOT NULL\n    [[AND onboard_type = {{onboard_type}}]]\n),\n\nfiltered_new_onboards AS (\n  SELECT *\n  FROM new_onboards n\n  WHERE\n    n.onboard_type = 'Post Corporate'\n    OR (\n      n.onboard_type = 'Organic'\n      AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n      AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), \n            MONTH\n          )\n    )\n    OR (n.onboard_type NOT IN ('Organic','Post Corporate'))\n),\n\nmerchants AS (\n  SELECT \n    m.*,\n    DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  INNER JOIN filtered_new_onboards nob\n    ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n    AND m.kam_id IS NULL\n),\n\nfirst_orders AS (\n  SELECT \n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(\n      o.transfer_status_id IN (\n        {{snippet: processed_orders}}\n      )\n    ) AS processed,\n    (\n      SAFE_DIVIDE(\n        SUM(\n          IF(\n            o.transfer_status_id IN ({{snippet: processed_orders}}),\n            (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n            - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n            0\n          )\n        ),\n        100\n      )\n      +\n      SAFE_DIVIDE(\n        SUM(\n          IF(\n            o.transfer_status_id IN ({{snippet: processed_orders}}),\n            COALESCE(o.cash_on_delivery_fee,0),\n            0\n          )\n        ),\n        100\n      )\n    ) AS expected_rvn_all\n  FROM orders o\n  WHERE o.sorted_at >= TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), MONTH)\n    AND o.sorted_at <  TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), DAY)\n  GROUP BY o.merchant_id\n),\n\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0)        AS processed,\n    COALESCE(om.expected_rvn_all, 0) AS expected_rvn_all\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.id = m.id\n  LEFT JOIN orders_month om ON om.merchant_id = m.id\n),\n\ndays_in_month AS (\n  SELECT\n    EXTRACT(DAY FROM CURRENT_DATE()) - 1 AS days_passed,\n    EXTRACT(\n      DAY FROM DATE_TRUNC(CURRENT_DATE(), MONTH) \n           + INTERVAL 1 MONTH \n           - INTERVAL 1 DAY\n    ) AS total_days_in_month\n),\n\ndetails AS (\n  SELECT\n    SAFE_CAST(n.business_team_user_id AS INT64) AS crm_id,\n    btu.user_name AS Acq_Name,\n    bt.team_name,\n    SUM(n.estimated_volume)          AS estimated_volume,\n    SUM(f.processed)                 AS Processed,\n    SUM(f.expected_rvn_all)          AS Expected_Revenue,\n    COUNT(DISTINCT f.merchant_id)    AS Merchant_Count,\n    COUNTIF(f.processed > 0)         AS Active_Merchant_Count,\n    SAFE_MULTIPLY(\n      SAFE_DIVIDE(SUM(f.processed), dm.days_passed),\n      dm.total_days_in_month\n    ) AS Forecasted_Order,\n    SAFE_MULTIPLY(\n      SAFE_DIVIDE(SUM(f.expected_rvn_all), dm.days_passed),\n      dm.total_days_in_month\n    ) AS Forecasted_Revenue,\n    SUM(\n      CASE\n        WHEN n.onboard_type = 'Post Corporate' THEN 0\n        WHEN n.onboard_type = 'Organic'        THEN SAFE_MULTIPLY(0.005, f.expected_rvn_all)\n        ELSE                                        SAFE_MULTIPLY(0.02,  f.expected_rvn_all)\n      END\n    ) AS KPI_Bonus\n  FROM filtered_new_onboards n\n  LEFT JOIN final f\n    ON (\n      (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n      OR (n.merchant_id IS NULL AND f.phone = n.phone)\n    )\n  LEFT JOIN `courier_appsmith.business_team_users` btu\n    ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\n  LEFT JOIN courier_appsmith.business_team bt\n    ON bt.id = btu.team_id\n  CROSS JOIN days_in_month dm\n  WHERE\n    n.onboard_type = 'Post Corporate'\n    OR (\n      n.onboard_type = 'Organic'\n      AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n      AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), \n            MONTH\n          )\n    )\n    OR (\n      n.onboard_type NOT IN ('Organic','Post Corporate')\n      AND f.first_order_date_after_lead_creation >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n      AND f.first_order_date_after_lead_creation < DATE_TRUNC(\n            DATE_ADD(CURRENT_DATE(), INTERVAL 1 MONTH), \n            MONTH\n          )\n    )\n  GROUP BY crm_id, Acq_Name, team_name, dm.days_passed, dm.total_days_in_month\n),\n\n-- \u2705 No TOTAL row here anymore \u2014 only individual rows\nfinal_final AS (\n  SELECT\n    ROW_NUMBER() OVER (ORDER BY KPI_Bonus DESC) AS Rank,\n    Acq_Name,\n    team_name,\n    crm_id,\n    Processed,\n    Expected_Revenue,\n    Merchant_Count,\n    Active_Merchant_Count,\n    Forecasted_Order,\n    Forecasted_Revenue,\n    estimated_volume,\n    KPI_Bonus,\n    SAFE_DIVIDE(Expected_Revenue, Processed) AS AOV\n  FROM details\n),\n\nfiltered_results AS (\n  SELECT\n    ff.*,\n    cut.order_target,\n    SAFE_DIVIDE(ff.Processed, cut.order_target)          AS Order_Goal,\n    SAFE_DIVIDE(ff.Expected_Revenue, cut.revenue_target) AS revenue_goal,\n    CASE\n      WHEN cut.order_target - ff.Processed > 0\n        THEN CONCAT('\ud83d\udd34 - ', ROUND(cut.order_target - ff.Processed))\n      WHEN cut.order_target - ff.Processed < 0\n        THEN CONCAT('\ud83d\udfe2 +', ROUND(ABS(cut.order_target - ff.Processed)))\n    END AS order_remaining,\n    CASE\n      WHEN cut.revenue_target - ff.Expected_Revenue > 0\n        THEN CONCAT('\ud83d\udd34 -', ROUND(cut.revenue_target - ff.Expected_Revenue))\n      WHEN cut.revenue_target - ff.Expected_Revenue < 0\n        THEN CONCAT('\ud83d\udfe2 +', ROUND(ABS(cut.revenue_target - ff.Expected_Revenue)))\n    END AS revenue_remaining\n  FROM final_final ff\n  LEFT JOIN hermes_bz_comms.crm_user_targets cut\n    ON ff.crm_id = cut.id\n  WHERE 1=1\n    [[AND ff.team_name IN ({{team_name}})]]\n    [[AND ff.Acq_Name  IN ({{Acq_Name}})]]\n)\n\nSELECT * FROM filtered_results\n-- WHERE Order_Goal is not null\n\nUNION ALL\n\nSELECT\n  0                                                        AS Rank,\n  'TOTAL'                                                  AS Acq_Name,\n  NULL                                                     AS team_name,\n  NULL                                                     AS crm_id,\n  SUM(Processed)                                           AS Processed,\n  SUM(Expected_Revenue)                                    AS Expected_Revenue,\n  SUM(Merchant_Count)                                      AS Merchant_Count,\n  SUM(Active_Merchant_Count)                               AS Active_Merchant_Count,\n  SUM(Forecasted_Order)                                    AS Forecasted_Order,\n  SUM(Forecasted_Revenue)                                  AS Forecasted_Revenue,\n  SUM(estimated_volume)                                    AS estimated_volume,\n  SUM(KPI_Bonus)                                           AS KPI_Bonus,\n  SAFE_DIVIDE(SUM(Expected_Revenue), SUM(Processed))       AS AOV,\n  NULL                                                     AS order_target,\n  SAFE_DIVIDE(SUM(Processed), SUM(order_target))           AS Order_Goal,\n  SAFE_DIVIDE(SUM(Expected_Revenue), SUM(revenue_goal * Expected_Revenue / NULLIF(Expected_Revenue,0))) AS revenue_goal,\n  NULL                                                     AS order_remaining,\n  NULL                                                     AS revenue_remaining\nFROM filtered_results\n\nORDER BY Rank"
+  },
+  {
+    "id": 2271,
+    "name": "CRM Merchant Entry Checker [Admin]",
+    "display": "object",
+    "description": "",
+    "database_id": 5,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 50,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "table.pivot_column": "business_owner_name",
+      "table.cell_column": "estimated_volume",
+      "table.columns": [
+        {
+          "name": "id",
+          "enabled": true
+        },
+        {
+          "name": "merchant_id",
+          "enabled": true
+        },
+        {
+          "name": "user_name",
+          "enabled": true
+        },
+        {
+          "name": "user_name_2",
+          "enabled": true
+        },
+        {
+          "name": "business_name",
+          "enabled": true
+        },
+        {
+          "name": "business_owner_name",
+          "enabled": false
+        },
+        {
+          "name": "estimated_volume",
+          "enabled": true
+        },
+        {
+          "name": "product_category_id",
+          "enabled": false
+        },
+        {
+          "name": "phone",
+          "enabled": true
+        },
+        {
+          "name": "website",
+          "enabled": false
+        },
+        {
+          "name": "created_at",
+          "enabled": true
+        },
+        {
+          "name": "updated_at",
+          "enabled": true
+        },
+        {
+          "name": "business_team_user_id",
+          "enabled": false
+        },
+        {
+          "name": "competitor_id",
+          "enabled": false
+        },
+        {
+          "name": "status",
+          "enabled": true
+        },
+        {
+          "name": "onboard_type",
+          "enabled": true
+        },
+        {
+          "name": "merchant_created_at",
+          "enabled": true
+        },
+        {
+          "name": "assigner_user_id",
+          "enabled": false
+        },
+        {
+          "name": "account_status",
+          "enabled": true
+        },
+        {
+          "name": "text_status",
+          "enabled": false
+        },
+        {
+          "name": "call_status",
+          "enabled": false
+        },
+        {
+          "name": "assigned_at",
+          "enabled": true
+        },
+        {
+          "name": "cnr_status",
+          "enabled": false
+        },
+        {
+          "name": "is_deleted",
+          "enabled": true
+        },
+        {
+          "name": "id_2",
+          "enabled": false
+        },
+        {
+          "name": "user_email",
+          "enabled": false
+        },
+        {
+          "name": "user_phone",
+          "enabled": false
+        },
+        {
+          "name": "team_id",
+          "enabled": false
+        },
+        {
+          "name": "supervisor_id",
+          "enabled": false
+        },
+        {
+          "name": "created_at_2",
+          "enabled": false
+        },
+        {
+          "name": "updated_at_2",
+          "enabled": false
+        },
+        {
+          "name": "is_active",
+          "enabled": false
+        },
+        {
+          "name": "is_admin",
+          "enabled": false
+        },
+        {
+          "name": "id_3",
+          "enabled": false
+        },
+        {
+          "name": "user_email_2",
+          "enabled": false
+        },
+        {
+          "name": "user_phone_2",
+          "enabled": false
+        },
+        {
+          "name": "team_id_2",
+          "enabled": false
+        },
+        {
+          "name": "supervisor_id_2",
+          "enabled": false
+        },
+        {
+          "name": "created_at_3",
+          "enabled": false
+        },
+        {
+          "name": "updated_at_3",
+          "enabled": false
+        },
+        {
+          "name": "is_active_2",
+          "enabled": false
+        },
+        {
+          "name": "is_admin_2",
+          "enabled": false
+        }
+      ],
+      "column_settings": {
+        "[\"name\",\"id\"]": {
+          "column_title": "CRM ID"
+        },
+        "[\"name\",\"user_name\"]": {
+          "column_title": "Crm Member Name"
+        },
+        "[\"name\",\"user_name_2\"]": {
+          "column_title": "Assigner Name"
+        }
+      }
+    },
+    "parameters": [],
+    "native_sql": "SELECT * \nFROM new_onboards no \nleft join business_team_users btu on btu.id = CAST(business_team_user_id as INT)\nleft join business_team_users btu2 on btu.id = CAST(assigner_user_id as INT)\nwhere 1=1\n[[and phone = {{phone}}]]\n[[and merchant_id = {{merchant_id}}]]\n"
+  },
+  {
+    "id": 2400,
+    "name": "Historical Merchant Overview",
+    "display": "table",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": 154,
+    "visualization_settings": {
+      "table.pivot_column": "cases",
+      "table.cell_column": "Processed",
+      "table.column_formatting": [
+        {
+          "columns": [
+            "merchant_id"
+          ],
+          "type": "single",
+          "operator": "=",
+          "value": "TOTAL",
+          "color": "#A989C5",
+          "highlight_row": true
+        }
+      ]
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\n\n-- Expected parameters:\n-- {{start_date}} : start date of analysis window (inclusive)\n-- {{end_date}}   : end date boundary (inclusive)\n\nWITH orders AS (\n  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\nUNION ALL\n  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\n\n/* Apply core filters to new_onboards once and reuse */\nnew_onboards AS (\n  SELECT \n    business_team_user_id,\n    merchant_id,\n    phone,\n    is_deleted,\n    status,\n    onboard_type,\n    estimated_volume,\n    created_at,\n    business_name\n  FROM `courier_appsmith.new_onboards`\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS NOT TRUE\n    AND status <> 'Inactive'\n    AND created_at IS NOT NULL\n),\n\n/* Window logic pushed down - now uses parameters */\nfiltered_new_onboards AS (\n  SELECT *\n  FROM new_onboards n\n  WHERE\n    n.onboard_type = 'Post Corporate'\n    -- Logic 1: For Organic, use n.created_at in window\n    OR (\n      n.onboard_type = 'Organic'\n      AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(DATE({{start_date}}), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n      AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(DATE({{end_date}}), INTERVAL 1 MONTH), \n            MONTH\n          )\n    )\n    OR\n    -- Logic 2: For others, use first_order_date in same window\n    (n.onboard_type != 'Organic' AND n.onboard_type != 'Post Corporate')\n),\n\nmerchants AS (\n  SELECT \n    m.*,\n    DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  INNER JOIN filtered_new_onboards nob\n    ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n    AND m.kam_id IS NULL\n),\n\n/* First order date after lead creation */\nfirst_orders AS (\n  SELECT \n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n\n/* Anchor: \"last_day\" = day before end_date */\nlast_day AS (\n  SELECT DATE_SUB(DATE({{end_date}}), INTERVAL 1 DAY) AS d\n),\n\n/* Daily processed counts for the selected window */\ndaily_orders AS (\n  SELECT\n    o.merchant_id,\n    DATE(o.sorted_at) AS order_date,\n    COUNTIF(\n      o.transfer_status_id IN (\n        5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n      )\n    ) AS processed\n  FROM orders o\n  WHERE DATE(o.sorted_at) >= DATE({{start_date}})\n    AND DATE(o.sorted_at) <= DATE({{end_date}})\n  GROUP BY 1,2\n),\n\n/* Per-merchant extras:\n   - last_day_processed = orders on last_day\n   - active_days        = count of unique order days (within window)\n   - avg_daily_orders   = average over days strictly BEFORE last_day\n*/\norders_extras AS (\n  SELECT\n    d.merchant_id,\n    SUM(d.processed) AS processed_month,\n    SUM(\n      CASE \n        WHEN d.order_date = (SELECT d FROM last_day) \n        THEN d.processed \n        ELSE 0 \n      END\n    ) AS last_day_processed,\n    COUNT(DISTINCT d.order_date) AS active_days,\n    SAFE_DIVIDE(\n      SUM(\n        CASE \n          WHEN d.order_date < (SELECT d FROM last_day) \n          THEN d.processed \n          ELSE 0 \n        END\n      ),\n      COUNT(\n        DISTINCT CASE \n          WHEN d.order_date < (SELECT d FROM last_day) \n          THEN d.order_date \n        END\n      )\n    ) AS avg_daily_orders\n  FROM daily_orders d\n  GROUP BY 1\n),\n\n/* Aggregate orders for the selected window per merchant (processed + expected revenue) */\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(\n      o.transfer_status_id IN (\n        5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n      )\n    ) AS processed,\n    (\n      SUM(\n        IF(\n          o.transfer_status_id IN (\n            5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n          ),\n          (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n          - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n          0\n        )\n      ) / 100\n      +\n      SUM(\n        IF(\n          o.transfer_status_id IN (\n            5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n          ),\n          COALESCE(o.cash_on_delivery_fee,0),\n          0\n        )\n      ) / 100\n    ) AS expected_rvn_all\n  FROM orders o\n  WHERE DATE(o.sorted_at) >= DATE({{start_date}})\n    AND DATE(o.sorted_at) <= DATE({{end_date}})\n  GROUP BY o.merchant_id\n),\n\n/* Combine merchants with order summary */\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0)          AS processed,\n    COALESCE(om.expected_rvn_all, 0)   AS expected_rvn_all,\n    COALESCE(oe.last_day_processed, 0) AS last_day_orders,\n    COALESCE(oe.active_days, 0)        AS active_days,\n    COALESCE(oe.avg_daily_orders, 0)   AS avg_daily_orders\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.id = m.id\n  LEFT JOIN orders_month  om ON om.merchant_id = m.id\n  LEFT JOIN orders_extras oe ON oe.merchant_id = m.id\n),\n\n/* Build detail rows once */\ndetails AS (\n  SELECT\n    CAST(f.merchant_id AS STRING) AS merchant_id,\n    COALESCE(f.merchant_name, n.business_name) AS business_name,\n    btu.user_name AS Acq_Name,\n    n.onboard_type AS onboard_type,\n    n.phone AS phone,\n    n.estimated_volume,\n    f.leads_created_at,\n    f.first_order_date_after_lead_creation,\n    /* roll-ups from merchant-level 'final' */\n    SUM(f.processed)                  AS Processed,\n    SUM(f.expected_rvn_all)           AS Expected_Revenue,\n    SUM(f.last_day_orders)            AS Last_Day_Orders,\n    SUM(f.active_days)                AS Active_Days,\n    ROUND(AVG(f.avg_daily_orders), 2) AS Avg_Daily_Orders,\n    CASE\n      WHEN n.onboard_type = 'Post Corporate' THEN 0\n      WHEN n.onboard_type = 'Organic'        THEN 0.005 * SUM(f.expected_rvn_all)\n      ELSE                                        0.02  * SUM(f.expected_rvn_all)\n    END AS KPI_Bonus\n  FROM filtered_new_onboards n\n  LEFT JOIN final f\n    ON (\n      (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n      OR (n.merchant_id IS NULL AND f.phone = n.phone)\n    )\n  LEFT JOIN `courier_appsmith.business_team_users` btu\n    ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\n  WHERE 1 = 1\n    AND (\n      n.onboard_type = 'Post Corporate'\n      -- Logic 1 again - using parameters\n      OR (n.onboard_type = 'Organic' \n       AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(DATE({{start_date}}), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n       AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(DATE({{end_date}}), INTERVAL 1 MONTH), \n            MONTH\n          )\n      )\n      OR\n      -- Logic 2: For others, use first_order_date in same window\n      (n.onboard_type != 'Organic'\n       AND f.first_order_date_after_lead_creation >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(DATE({{start_date}}), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n       AND f.first_order_date_after_lead_creation < DATE_TRUNC(\n            DATE_ADD(DATE({{end_date}}), INTERVAL 1 MONTH), \n            MONTH\n          )\n      )\n    )\n    [[AND f.merchant_id = {{merchant_ID}}]]\n    [[AND btu.user_name  = {{Acq_Member_Name}}]]\n    [[AND n.onboard_type = {{onboard_type}}]]\n  GROUP BY 1,2,3,4,5,6,7,8\n)\n\n-- Final output: details + total derived from details\nSELECT *, \n  CASE \n    WHEN Last_Day_Orders < Avg_Daily_Orders THEN 'Low' \n    ELSE 'High' \n  END AS cases\nFROM (\n  SELECT\n    merchant_id,\n    business_name,\n    Acq_Name,\n    onboard_type,\n    phone,\n    leads_created_at,\n    first_order_date_after_lead_creation,\n    Processed,\n    Expected_Revenue,\n    Last_Day_Orders,\n    Active_Days,\n    Avg_Daily_Orders,\n    estimated_volume,\n    KPI_Bonus\n  FROM details\n\n  UNION ALL\n\n  SELECT\n    'TOTAL' AS merchant_id,\n    NULL    AS business_name,\n    NULL    AS Acq_Name,\n    NULL    AS onboard_type,\n    NULL    AS phone,\n    NULL    AS leads_created_at,\n    NULL    AS first_order_date_after_lead_creation,\n    SUM(Processed)        AS Processed,\n    SUM(Expected_Revenue) AS Expected_Revenue,\n    NULL                  AS Last_Day_Orders,\n    NULL                  AS Active_Days,\n    NULL                  AS Avg_Daily_Orders,\n    NULL                  AS estimated_volume,\n    SUM(KPI_Bonus)        AS KPI_Bonus\n  FROM details\n) x\nORDER BY\n  CASE WHEN merchant_id = 'TOTAL' THEN 0 ELSE 1 END,\n  Processed DESC;"
+  },
+  {
+    "id": 2402,
+    "name": "Historical Leaderboard ",
+    "display": "table",
+    "description": "",
+    "database_id": 7,
+    "lib_type": "mbql/query",
+    "stage_count": 1,
+    "native_sql_count": 1,
+    "collection_id": 428,
+    "dashboard_id": null,
+    "visualization_settings": {
+      "table.columns": [
+        {
+          "name": "f0_",
+          "enabled": true
+        }
+      ],
+      "pie.dimension": [
+        "Status"
+      ],
+      "table.cell_column": "processed",
+      "pie.show_labels": false,
+      "pie.rows": [
+        {
+          "key": "Info Pending",
+          "name": "Info Pending",
+          "originalName": "Info Pending",
+          "color": "#E75454",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "First Order Pending",
+          "name": "First Order Pending",
+          "originalName": "First Order Pending",
+          "color": "#ED8535",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Incubation",
+          "name": "Incubation",
+          "originalName": "Incubation",
+          "color": "#88BF4D",
+          "defaultColor": false,
+          "enabled": true,
+          "hidden": false,
+          "isOther": false
+        },
+        {
+          "key": "Churn",
+          "name": "Churn",
+          "originalName": "Churn",
+          "color": "#F9D45C",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        },
+        {
+          "key": "Hunt",
+          "name": "Hunt",
+          "originalName": "Hunt",
+          "color": "#98D9D9",
+          "defaultColor": true,
+          "enabled": true,
+          "hidden": false,
+          "isOther": true
+        }
+      ],
+      "table.column_formatting": [
+        {
+          "columns": [
+            "revenue_goal"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "Order_Goal"
+          ],
+          "type": "range",
+          "colors": [
+            "hsla(358, 71%, 62%, 1)",
+            "#FFFFFF",
+            "#84BB4C"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "Forecasted_Revenue"
+          ],
+          "type": "single",
+          "operator": "not-null",
+          "value": "",
+          "color": "#FBE499",
+          "highlight_row": false
+        },
+        {
+          "columns": [
+            "KPI_Bonus"
+          ],
+          "type": "single",
+          "operator": "not-null",
+          "value": "",
+          "color": "#999AC4",
+          "highlight_row": false
+        },
+        {
+          "columns": [],
+          "type": "range",
+          "colors": [
+            "white",
+            "#88BF4D"
+          ],
+          "min_type": null,
+          "max_type": null,
+          "min_value": 0,
+          "max_value": 100
+        },
+        {
+          "columns": [
+            "Acq_Name"
+          ],
+          "type": "single",
+          "operator": "=",
+          "value": "TOTAL",
+          "color": "#999AC4",
+          "highlight_row": true
+        }
+      ],
+      "table.row_index": false,
+      "pie.metric": "estimated_volume",
+      "pie.decimal_places": 1,
+      "table.pivot_column": "merchant_name",
+      "column_settings": {}
+    },
+    "parameters": [],
+    "native_sql": "-- standardSQL\nWITH orders AS (\n  -- Only columns actually used downstream\n  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n\tUNION ALL \n\t  SELECT\n    id,\n    merchant_id,\n    created_at,\n    sorted_at,\n    transfer_status_id,\n    delivery_fee,\n    additional_charge,\n    discount,\n    promo_discount,\n    cash_on_delivery_fee,\n    updated_at,\n    country_id\n  FROM `courier_realtime_datastream.public_archived_orders`\n  WHERE updated_at IS NOT NULL\n    AND country_id = 1\n),\n\n/* Apply core filters to new_onboards once and reuse */\nnew_onboards AS (\n  SELECT \n    business_team_user_id,\n    merchant_id,\n    phone,\n    is_deleted,\n    status,\n    onboard_type,\n    estimated_volume,\n    created_at\n  FROM `courier_appsmith.new_onboards`\n  WHERE business_team_user_id <> '1'\n    AND is_deleted IS NOT TRUE\n    AND status <> 'Inactive'\n    AND created_at IS NOT NULL\n),\n\n/* Window logic pushed down - now uses parameters */\nfiltered_new_onboards AS (\n  SELECT *\n  FROM new_onboards n\n  WHERE\n    n.onboard_type = 'Post Corporate'\n    -- Logic 1: For Organic, use n.created_at in window (15th last month to end of current month)\n    OR (\n      n.onboard_type = 'Organic'\n      AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(DATE({{start_date}}), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n      AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(DATE({{end_date}}), INTERVAL 1 MONTH), \n            MONTH\n          )\n    )\n    OR\n    -- Logic 2: For others, use first_order_date in same window\n    (n.onboard_type != 'Organic' AND n.onboard_type != 'Post Corporate')\n),\n\nmerchants AS (\n  SELECT \n    m.*,\n    DATE(nob.created_at) AS leads_created_at\n  FROM `courier_realtime_datastream.public_merchants` m\n  INNER JOIN filtered_new_onboards nob\n    ON (\n      (nob.merchant_id IS NOT NULL AND m.id = nob.merchant_id)\n      OR (nob.merchant_id IS NULL AND m.phone = nob.phone)\n    )\n  WHERE m.updated_at IS NOT NULL\n    AND m.kam_id IS NULL\n),\n\n/* First order date after lead creation */\nfirst_orders AS (\n  SELECT \n    m.id,\n    MIN(DATE(o.created_at)) AS first_order_date_after_lead_creation\n  FROM merchants m\n  LEFT JOIN orders o \n    ON m.id = o.merchant_id \n    AND DATE(o.created_at) >= m.leads_created_at\n  GROUP BY m.id\n),\n\n/* Monthly aggregation per merchant - now uses date range parameters */\norders_month AS (\n  SELECT\n    o.merchant_id,\n    COUNTIF(\n      o.transfer_status_id IN (\n        5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n      )\n    ) AS processed,\n    (\n      SAFE_DIVIDE(\n        SUM(\n          IF(\n            o.transfer_status_id IN (\n              5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n            ),\n            (COALESCE(o.delivery_fee,0) + COALESCE(o.additional_charge,0))\n            - (COALESCE(o.discount,0) + COALESCE(o.promo_discount,0)),\n            0\n          )\n        ),\n        100\n      )\n      +\n      SAFE_DIVIDE(\n        SUM(\n          IF(\n            o.transfer_status_id IN (\n              5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44\n            ),\n            COALESCE(o.cash_on_delivery_fee,0),\n            0\n          )\n        ),\n        100\n      )\n    ) AS expected_rvn_all\n  FROM orders o\n  -- Date range filter using parameters\n  WHERE DATE(o.sorted_at) >= DATE({{start_date}})\n    AND DATE(o.sorted_at) <= DATE({{end_date}})\n  GROUP BY o.merchant_id\n),\n\n/* Combine merchants with order summary */\nfinal AS (\n  SELECT\n    m.id   AS merchant_id,\n    m.phone,\n    m.name AS merchant_name,\n    m.leads_created_at,\n    fo.first_order_date_after_lead_creation,\n    COALESCE(om.processed, 0)        AS processed,\n    COALESCE(om.expected_rvn_all, 0) AS expected_rvn_all\n  FROM merchants m\n  LEFT JOIN first_orders fo ON fo.id = m.id\n  LEFT JOIN orders_month om ON om.merchant_id = m.id\n),\n\n/* Days calculation based on date range parameters */\ndays_in_range AS (\n  SELECT\n    DATE_DIFF(DATE({{end_date}}), DATE({{start_date}}), DAY) + 1 AS days_in_period,\n    DATE_DIFF(DATE({{end_date}}), DATE({{start_date}}), DAY) + 1 AS total_days_in_period\n),\n\n/* Per-Acq Member stats incl. forecasts */\ndetails AS (\n  SELECT\n    SAFE_CAST(n.business_team_user_id AS INT64) as crm_id,\n    btu.user_name AS Acq_Name,\n    bt.team_name  AS team_name,\n    SUM(n.estimated_volume) AS estimated_volume,\n    SUM(f.processed)        AS Processed,\n    SUM(f.expected_rvn_all) AS Expected_Revenue,\n    COUNT(DISTINCT f.merchant_id) AS Merchant_Count,\n\n    /* Forecasts using the date range period */\n    COALESCE(\n      SAFE_MULTIPLY(\n        SAFE_DIVIDE(SUM(f.processed), dr.days_in_period),\n        dr.total_days_in_period\n      ), 0\n    ) AS Forecasted_Order,\n\n    COALESCE(\n      SAFE_MULTIPLY(\n        SAFE_DIVIDE(SUM(f.expected_rvn_all), dr.days_in_period),\n        dr.total_days_in_period\n      ), 0\n    ) AS Forecasted_Revenue,\n\n    SUM(\n      CASE\n        WHEN n.onboard_type = 'Post Corporate' THEN 0\n        WHEN n.onboard_type = 'Organic'        THEN SAFE_MULTIPLY(0.005, f.expected_rvn_all)\n        ELSE                                        SAFE_MULTIPLY(0.02, f.expected_rvn_all)\n      END\n    ) AS KPI_Bonus\n  FROM filtered_new_onboards n\n  LEFT JOIN final f\n    ON (\n      (n.merchant_id IS NOT NULL AND f.merchant_id = n.merchant_id)\n      OR (n.merchant_id IS NULL AND f.phone = n.phone)\n    )\n  LEFT JOIN `courier_appsmith.business_team_users` btu\n    ON btu.id = SAFE_CAST(n.business_team_user_id AS INT64)\n  LEFT JOIN courier_appsmith.business_team bt\n    ON bt.id = btu.team_id\n  CROSS JOIN days_in_range dr\n  WHERE 1=1\n    AND (\n      n.onboard_type = 'Post Corporate'\n      -- Logic 1 again - using parameters\n      OR (n.onboard_type = 'Organic' \n       AND DATE(n.created_at) >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(DATE({{start_date}}), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n       AND DATE(n.created_at) < DATE_TRUNC(\n            DATE_ADD(DATE({{end_date}}), INTERVAL 1 MONTH), \n            MONTH\n          )\n      )\n      OR\n      -- Logic 2: For others, use first_order_date in same window\n      (n.onboard_type != 'Organic'\n       AND f.first_order_date_after_lead_creation >= DATE_ADD(\n            DATE_TRUNC(DATE_SUB(DATE({{start_date}}), INTERVAL 1 MONTH), MONTH),\n            INTERVAL 15 DAY\n          )\n       AND f.first_order_date_after_lead_creation < DATE_TRUNC(\n            DATE_ADD(DATE({{end_date}}), INTERVAL 1 MONTH), \n            MONTH\n          )\n      )\n    )\n    [[AND f.merchant_id = {{merchant_ID}}]]\n    [[AND btu.user_name  = {{Acq_Member_Name}}]]\n    [[AND n.onboard_type = {{onboard_type}}]]\n    [[AND bt.team_name IN ({{team_name}})]]\n  GROUP BY \n    SAFE_CAST(n.business_team_user_id AS INT64),\n    btu.user_name,\n    bt.team_name,\n    dr.days_in_period,\n    dr.total_days_in_period\n),\n\n-- Final output with TOTAL row\nfinal_final AS (\n  SELECT\n    ROW_NUMBER() OVER (\n      ORDER BY \n        CASE WHEN Acq_Name = 'TOTAL' THEN 0 ELSE 1 END,\n        KPI_Bonus DESC\n    ) - 1 AS Rank,\n    Acq_Name,\n    team_name,\n    Processed,\n    Expected_Revenue,\n    Merchant_Count,\n    Forecasted_Order,\n    Forecasted_Revenue,\n    estimated_volume,\n    KPI_Bonus,\n    AOV,\n    crm_id\n  FROM (\n    -- Per Acq member\n    SELECT\n      Acq_Name,\n      team_name,\n      crm_id,\n      Processed,\n      Expected_Revenue,\n      Merchant_Count,\n      Forecasted_Order,\n      Forecasted_Revenue,\n      estimated_volume,\n      KPI_Bonus,\n      SAFE_DIVIDE(Expected_Revenue, NULLIF(Processed, 0)) AS AOV\n    FROM details\n\n    UNION ALL\n\n    -- TOTAL row\n    SELECT\n      'TOTAL' AS Acq_Name,\n      NULL    AS team_name,\n      NULL    AS crm_id,\n      SUM(Processed)        AS Processed,\n      SUM(Expected_Revenue) AS Expected_Revenue,\n      SUM(Merchant_Count)   AS Merchant_Count,\n      SUM(Forecasted_Order)    AS Forecasted_Order,\n      SUM(Forecasted_Revenue)  AS Forecasted_Revenue,\n      SUM(estimated_volume)    AS estimated_volume,\n      SUM(KPI_Bonus)           AS KPI_Bonus,\n      SAFE_DIVIDE(\n        SUM(Expected_Revenue),\n        NULLIF(SUM(Processed), 0)\n      ) AS AOV\n    FROM details\n  ) t\n  ORDER BY\n    CASE WHEN Acq_Name = 'TOTAL' THEN 0 ELSE 1 END,\n    KPI_Bonus DESC\n)\n\nSELECT \n    ff.*,\n    cut.order_target,\n    SAFE_DIVIDE(processed, cut.order_target) AS Order_Goal,\n    SAFE_DIVIDE(Expected_Revenue, cut.revenue_target) AS revenue_goal,\n\n    -- ORDER REMAINING (rounded, with emoji)\n    CASE\n        WHEN (cut.order_target - processed) > 0 THEN \n            CONCAT('\ud83d\udd34 - ', ROUND(cut.order_target - processed, 0))        \n        WHEN (cut.order_target - processed) < 0 THEN \n            CONCAT('\ud83d\udfe2 +', ROUND(ABS(cut.order_target - processed), 0))    \n    END AS order_remaining,\n\n    -- REVENUE REMAINING (rounded, with emoji)\n    CASE\n        WHEN (cut.revenue_target - Expected_Revenue) > 0 THEN \n            CONCAT('\ud83d\udd34 -', ROUND(cut.revenue_target - Expected_Revenue, 0))    \n        WHEN (cut.revenue_target - Expected_Revenue) < 0 THEN \n            CONCAT('\ud83d\udfe2 +', ROUND(ABS(cut.revenue_target - Expected_Revenue), 0)) \n    END AS revenue_remaining\n\nFROM final_final ff\nLEFT JOIN hermes_bz_comms.crm_user_targets cut \n    ON ff.crm_id = cut.id;"
+  }
+]
