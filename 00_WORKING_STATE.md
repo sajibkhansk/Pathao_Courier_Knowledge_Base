@@ -6,11 +6,11 @@ Persistent state file for the Pathao Courier HITL Markdown knowledge-base proces
 
 ## Current Phase
 
-Phase 3: Metabase Deep Dive — Price Change / COD Reduction
+Phase 3: Metabase Deep Dive — Dashboard 154 CRM Managers Dashboard (promoted)
 
 ## Current Topic
 
-Price Change detection via OSC logs: collectable amount change event/payload pattern, merchant OTP, delivered/exchange inclusion, and fraud-specific filters.
+CRM onboarding logic, merchant attribution, KPI bonus formula, processed orders definition, and team hierarchy documented from 15 dashboard cards. 12 discrepancies found, 12 Oracle questions pending.
 
 ## Last Completed
 
@@ -26,10 +26,13 @@ Price Change detection via OSC logs: collectable amount change event/payload pat
 
 ## Files Updated Last
 
-- `03_Business_Logic/price_change_logic.md` — new file documenting Human Oracle answers, observed Metabase card logic, SQL-generation rules, caveats, and open questions.
-- `03_Business_Logic/order_status_changes_human_oracle.md` — added Price Change section noting OSC logs are required and final order amount comparison is not canonical.
-- `_INDEX_START_HERE.md` — added `price_change_logic.md` to Business Logic file map.
-- `00_WORKING_STATE.md` — updated this state.
+- `03_Business_Logic/crm_onboard_logic.md` — NEW: CRM onboarding window logic, KPI bonus, revenue formula, forecast/target logic from Dashboard 154.
+- `03_Business_Logic/crm_merchant_attribution.md` — NEW: CRM merchant-to-lead matching with merchant_id + phone fallback.
+- `06-SYSTEM/semantic-layer/tables/new_onboards.md` — NEW: Field map for courier_appsmith.new_onboards with CAST join chain.
+- `06-SYSTEM/semantic-layer/tables/crm_user_targets.md` — NEW: Per-user CRM target table schema.
+- `_INDEX_START_HERE.md` — Added CRM business logic files and new semantic-layer table docs.
+- `07-FEEDBACK-INBOX/2026-06-19.md` — Dashboard 154 entry marked promoted.
+- `00_WORKING_STATE.md` — Updated this state.
 
 ## Related Notes
 

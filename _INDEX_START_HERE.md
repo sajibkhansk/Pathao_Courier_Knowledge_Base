@@ -46,6 +46,8 @@ Current files:
 - `merchant_logic_human_oracle.md` — Human Oracle rules for merchant classification sourcing (`merchant_type` is reliable, `merchant_category`/`product_category`/`category` are not), `source` panel mapping, KAM assignment threshold, and CRM DB.
 - `ir_kobiraj_logic_human_oracle.md` — IR/Kobiraj issue lifecycle, status meanings, tag_type mapping, team mappings, SLA logic, and known card patterns from Phase 3 Metabase deep dive.
 - `return_revamp_logic.md` — Return lifecycle statuses (43/25/44/11), cycle detection pattern, and Return Revamp dashboard card catalog.
+- `crm_onboard_logic.md` — CRM onboarding window logic, KPI bonus formula (0/0.005/0.02), revenue formula, processed orders definition, forecast and target logic. Source: Dashboard 154.
+- `crm_merchant_attribution.md` — CRM merchant-to-lead matching with merchant_id primary + phone fallback. Two implementation patterns (UNION ALL vs OR-join). Source: Dashboard 154.
 - `open_orders_business_logic.md` — Open order status definition (use `on_process` from `courier_transfer_status`), default filters, section/responsible logic notes, return order aging rule, aging buckets, and known card patterns from Open Orders collection.
 - `price_change_logic.md` — Price Change / COD Reduction logic from Phase 3: use OSC logs for collectable amount changes, merchant OTP meaning, tunable flagging thresholds, delivered vs exchange inclusion, and observed Price Change card catalog.
 
@@ -78,6 +80,8 @@ Key semantic notes:
 - [[06-SYSTEM/semantic-layer/tables/public_merchants.md|public_merchants]] — merchant registry
 - [[06-SYSTEM/semantic-layer/tables/public_archived_orders.md|public_archived_orders]] — archived orders (historical completeness)
 - [[06-SYSTEM/semantic-layer/tables/public_ties_merchant.md|public_ties_merchant]] — merchant-to-team assignment
+- [[06-SYSTEM/semantic-layer/tables/new_onboards.md|new_onboards]] — CRM lead/onboarding table with CAST join chain to team names
+- [[06-SYSTEM/semantic-layer/tables/crm_user_targets.md|crm_user_targets]] — per-acquisition-member monthly order/revenue targets
 - [[06-SYSTEM/semantic-layer/tables/business_team_targets.md|business_team_targets]] — monthly targets
 - [[06-SYSTEM/semantic-layer/metrics/delivery_rate.md|delivery_rate]]
 - [[06-SYSTEM/semantic-layer/metrics/business_team_mtd_revenue.md|business_team_mtd_revenue]]
