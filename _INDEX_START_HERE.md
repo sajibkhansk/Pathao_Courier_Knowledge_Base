@@ -50,6 +50,7 @@ Current files:
 - `crm_merchant_attribution.md` — CRM merchant-to-lead matching with merchant_id primary + phone fallback. Two implementation patterns (UNION ALL vs OR-join). Source: Dashboard 154.
 - `open_orders_business_logic.md` — Open order status definition (use `on_process` from `courier_transfer_status`), default filters, section/responsible logic notes, return order aging rule, aging buckets, and known card patterns from Open Orders collection.
 - `price_change_logic.md` — Price Change / COD Reduction logic from Phase 3: use OSC logs for collectable amount changes, merchant OTP meaning, tunable flagging thresholds, delivered vs exchange inclusion, and observed Price Change card catalog.
+- `crm-kam-feedback-analysis.md` — KAM feedback analysis rules: `detailed_response` is primary analytical field, dashboard naming (Monthly KAM Feedback = Monthly Merchant Feedback id 191), data quality warning (63% dissatisfaction_reason_id = 40 unresolvable).
 
 ### 04_SQL_Patterns
 Use for reusable SQL snippets and implementation details: partition elimination, timezone handling, date windows, dedupe patterns, Metabase parameter conventions.

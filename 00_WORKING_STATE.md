@@ -26,12 +26,10 @@ CRM onboarding logic, merchant attribution, KPI bonus formula, processed orders 
 
 ## Files Updated Last
 
-- `03_Business_Logic/crm_onboard_logic.md` — NEW: CRM onboarding window logic, KPI bonus, revenue formula, forecast/target logic from Dashboard 154.
-- `03_Business_Logic/crm_merchant_attribution.md` — NEW: CRM merchant-to-lead matching with merchant_id + phone fallback.
-- `06-SYSTEM/semantic-layer/tables/new_onboards.md` — NEW: Field map for courier_appsmith.new_onboards with CAST join chain.
-- `06-SYSTEM/semantic-layer/tables/crm_user_targets.md` — NEW: Per-user CRM target table schema.
-- `_INDEX_START_HERE.md` — Added CRM business logic files and new semantic-layer table docs.
-- `07-FEEDBACK-INBOX/2026-06-19.md` — Dashboard 154 entry marked promoted.
+- `03_Business_Logic/crm-kam-feedback-analysis.md` — NEW: KAM feedback analysis rules, dashboard naming, data quality warning (63% dissatisfaction_reason_id = 40).
+- `SOUL.md` — Added WhatsApp formatting mandatory workflow step in Communication Style.
+- `_INDEX_START_HERE.md` — Added crm-kam-feedback-analysis.md.
+- `07-FEEDBACK-INBOX/2026-06-20.md` — Entries 1, 2, 3 marked promoted.
 - `00_WORKING_STATE.md` — Updated this state.
 
 ## Related Notes
