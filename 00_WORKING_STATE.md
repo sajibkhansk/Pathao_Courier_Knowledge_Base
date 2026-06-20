@@ -26,10 +26,11 @@ CRM onboarding logic, merchant attribution, KPI bonus formula, processed orders 
 
 ## Files Updated Last
 
-- `03_Business_Logic/crm-kam-feedback-analysis.md` — NEW: KAM feedback analysis rules, dashboard naming, data quality warning (63% dissatisfaction_reason_id = 40).
+- `03_Business_Logic/return-aging-logic.md` — NEW: Return aging calculation from Card #1360. Start→end timestamps, DATE_DIFF, statuses 21/35, UNION ALL live+archive.
+- `03_Business_Logic/crm-kam-feedback-analysis.md` — NEW: KAM feedback analysis rules, dashboard naming, data quality warning.
 - `SOUL.md` — Added WhatsApp formatting mandatory workflow step in Communication Style.
-- `_INDEX_START_HERE.md` — Added crm-kam-feedback-analysis.md.
-- `07-FEEDBACK-INBOX/2026-06-20.md` — Entries 1, 2, 3 marked promoted.
+- `_INDEX_START_HERE.md` — Added return-aging-logic.md and crm-kam-feedback-analysis.md.
+- `07-FEEDBACK-INBOX/2026-06-20.md` — Entry #7 promoted to return-aging-logic.md. Entries #8, #9 rejected. Entries #1, #2, #3 previously promoted.
 - `00_WORKING_STATE.md` — Updated this state.
 
 ## Related Notes

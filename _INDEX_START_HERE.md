@@ -51,6 +51,7 @@ Current files:
 - `open_orders_business_logic.md` — Open order status definition (use `on_process` from `courier_transfer_status`), default filters, section/responsible logic notes, return order aging rule, aging buckets, and known card patterns from Open Orders collection.
 - `price_change_logic.md` — Price Change / COD Reduction logic from Phase 3: use OSC logs for collectable amount changes, merchant OTP meaning, tunable flagging thresholds, delivered vs exchange inclusion, and observed Price Change card catalog.
 - `crm-kam-feedback-analysis.md` — KAM feedback analysis rules: `detailed_response` is primary analytical field, dashboard naming (Monthly KAM Feedback = Monthly Merchant Feedback id 191), data quality warning (63% dissatisfaction_reason_id = 40 unresolvable).
+- `return-aging-logic.md` — Return aging calculation from Card #1360: start (created_at/sorted_at/lmh_at) → end (transfer_status_updated_at), DATE_DIFF in whole days, statuses 21/35 only, UNION ALL live+archive requirement.
 
 ### 04_SQL_Patterns
 Use for reusable SQL snippets and implementation details: partition elimination, timezone handling, date windows, dedupe patterns, Metabase parameter conventions.
