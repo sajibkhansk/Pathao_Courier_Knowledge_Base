@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07-FEEDBACK-INBOX/2026-06-19.md",
+                "file": "07-FEEDBACK-INBOX/2026-06-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-19"
+              "title": "2026-06-20"
             }
           }
         ]
@@ -186,11 +186,19 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "07-FEEDBACK-INBOX/2026-06-20.md",
+    "07-FEEDBACK-INBOX/2026-06-19.md",
+    "07-FEEDBACK-INBOX/2026-06-18.md",
+    "03_Business_Logic/crm_onboard_logic.md",
+    "03_Business_Logic/crm_merchant_attribution.md",
+    "03_Business_Logic/cds_key_descriptions.md",
+    "03_Business_Logic/merchant_logic_human_oracle.md",
+    "03_Business_Logic/ir_kobiraj_logic_human_oracle.md",
+    "03_Business_Logic/crm-kam-feedback-analysis.md",
+    "03_Business_Logic/return-aging-logic.md",
     "06-SYSTEM/templates/promotion-review-template.md",
     "06-SYSTEM/templates/knowledge-candidate-template.md",
     "06-SYSTEM/templates/exploration-report-template.md",
-    "07-FEEDBACK-INBOX/2026-06-18.md",
-    "07-FEEDBACK-INBOX/2026-06-19.md",
     "06-SYSTEM/semantic-layer/tables/new_onboards.md",
     "06-SYSTEM/semantic-layer/tables/crm_user_targets.md",
     "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
@@ -204,18 +212,10 @@
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-card-queries.json",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-business-logic.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard",
-    "03_Business_Logic/crm_onboard_logic.md",
-    "03_Business_Logic/crm_merchant_attribution.md",
     "07-FEEDBACK-INBOX/_README.md",
     "00_STRUCTURE_AUDIT.md",
     "_INDEX_START_HERE.md",
     "07-FEEDBACK-INBOX",
-    "06-SYSTEM/semantic-layer/relationships.md",
-    "06-SYSTEM/semantic-layer/glossary.md",
-    "06-SYSTEM/semantic-layer/tables/public_ties_merchant.md",
-    "01_Domain_Basics/README.md",
-    "02_Data_Dictionary/core_tables_phase2_profile.md",
-    "Untitled.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/dashboard-31-raw.json",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3260-Exclusive-Merchant-Performance-DOD.sql",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/card-3256-Revenue-Target-Achieved-MTM.sql",
