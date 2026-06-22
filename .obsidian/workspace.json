@@ -186,6 +186,8 @@
   },
   "active": "30dca11fe99075fe",
   "lastOpenFiles": [
+    "08-Flagged_Merchants/flagged_merchants.csv",
+    "08-Flagged_Merchants/flagged_merchants.json",
     "08-Flagged_Merchants/~$flagged_merchants 2.xlsx",
     "08-Flagged_Merchants/flagged_merchants 2.xlsx",
     "08-Flagged_Merchants/~$flagged_merchants.xlsx",
@@ -199,8 +201,6 @@
     "05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21.md",
     "05_HERMES_OUTPUT",
     "04_SQL_Patterns/cds_cte_patterns.md",
-    "05-HERMES-OUTPUTS/no_cpo_lmh_sylhet_jalalabad.txt",
-    "05-HERMES-OUTPUTS/no_cpo_lmh_combined.txt",
     "07-FEEDBACK-INBOX/2026-06-20.md",
     "07-FEEDBACK-INBOX/2026-06-19.md",
     "07-FEEDBACK-INBOX/2026-06-18.md",
