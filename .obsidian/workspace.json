@@ -184,20 +184,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b968d1f6124ba475",
+  "active": "30dca11fe99075fe",
   "lastOpenFiles": [
+    "08-Flagged_Merchants/~$flagged_merchants 2.xlsx",
+    "08-Flagged_Merchants/flagged_merchants 2.xlsx",
+    "08-Flagged_Merchants/~$flagged_merchants.xlsx",
+    "08-Flagged_Merchants/flagged_merchants_clean.csv",
+    "08-Flagged_Merchants/flagged_merchants.xlsx",
+    "08-Flagged_Merchants/flagged_merchants.zip",
+    "08-Flagged_Merchants/README.md",
+    "08-Flagged_Merchants",
+    "07-FEEDBACK-INBOX/2026-06-22.md",
+    "05_HERMES_OUTPUT/merchants_may_orders_no_june_orders.csv",
     "05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21.md",
     "05_HERMES_OUTPUT",
     "04_SQL_Patterns/cds_cte_patterns.md",
     "05-HERMES-OUTPUTS/no_cpo_lmh_sylhet_jalalabad.txt",
     "05-HERMES-OUTPUTS/no_cpo_lmh_combined.txt",
-    "05-HERMES-OUTPUTS/no_cpo_lmh_chittagong_nasirabad.txt",
-    "05-HERMES-OUTPUTS/no_cpo_lmh_chittagong_halishahar.txt",
-    "05-HERMES-OUTPUTS/direct_lmh_sylhet_jalalabad.txt",
-    "05-HERMES-OUTPUTS/direct_lmh_nasirabad.txt",
-    "05-HERMES-OUTPUTS/direct_lmh_jalalabad.txt",
-    "05-HERMES-OUTPUTS/direct_lmh_halishahar.txt",
-    "05-HERMES-OUTPUTS/direct_lmh_combined.txt",
     "07-FEEDBACK-INBOX/2026-06-20.md",
     "07-FEEDBACK-INBOX/2026-06-19.md",
     "07-FEEDBACK-INBOX/2026-06-18.md",
@@ -218,9 +221,6 @@
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-validation-report.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-open-questions.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-filter-map.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-business-logic.md",
-    "07-FEEDBACK-INBOX/_README.md"
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md"
   ]
 }
