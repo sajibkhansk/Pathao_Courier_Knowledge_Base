@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07-FEEDBACK-INBOX/2026-06-22.md",
+                "file": "07-FEEDBACK-INBOX/2026-06-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-22"
+              "title": "2026-06-20"
             }
           }
         ]
@@ -187,6 +187,7 @@
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
     "05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21.md",
+    "07-FEEDBACK-INBOX/2026-06-22.md",
     "06-SYSTEM/templates/new-metric-template.md",
     "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
@@ -198,7 +199,6 @@
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-open-questions.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/proposed-system-vault-updates.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
-    "07-FEEDBACK-INBOX/2026-06-22.md",
     "03_Business_Logic/crm-kam-feedback-analysis.md",
     "08-Flagged_Merchants/flagged_merchants.csv",
     "08-Flagged_Merchants/flagged_merchants.json",
