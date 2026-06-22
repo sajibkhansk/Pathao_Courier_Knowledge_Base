@@ -1,0 +1,46 @@
+{
+  "report_metadata": {
+    "title": "Flagged Merchants - Slab Wise Discount Threshold Analysis",
+    "date": "2026-06-22",
+    "rule": "final < threshold = PASS | final >= threshold = FLAGGED (strict less-than)",
+    "thresholds": [
+      {
+        "zone": "ISD-ISD",
+        "threshold": 45
+      },
+      {
+        "zone": "ISD-OSD",
+        "threshold": 85
+      },
+      {
+        "zone": "ISD-RSD",
+        "threshold": 65
+      },
+      {
+        "zone": "RSD-ISD",
+        "threshold": 65
+      },
+      {
+        "zone": "RSD-RSD",
+        "threshold": 65
+      },
+      {
+        "zone": "RSD-OSD",
+        "threshold": 85
+      },
+      {
+        "zone": "OSD-ISD",
+        "threshold": 85
+      },
+      {
+        "zone": "OSD-RSD",
+        "threshold": 85
+      },
+      {
+        "zone": "OSD-OSD",
+        "threshold": 85
+      }
+    ]
+  },
+  "merchants": []
+}
