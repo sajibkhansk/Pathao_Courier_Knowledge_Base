@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Business_Logic/crm-kam-feedback-analysis.md",
+                "file": "07-FEEDBACK-INBOX/2026-06-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "crm-kam-feedback-analysis"
+              "title": "2026-06-22"
             }
           }
         ]
@@ -184,8 +184,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "30dca11fe99075fe",
+  "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21.md",
+    "06-SYSTEM/templates/new-metric-template.md",
+    "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
+    "05-HERMES-OUTPUTS/analyses/hello-world.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-business-logic.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-validation-report.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-open-questions.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/proposed-system-vault-updates.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
+    "07-FEEDBACK-INBOX/2026-06-22.md",
+    "03_Business_Logic/crm-kam-feedback-analysis.md",
     "08-Flagged_Merchants/flagged_merchants.csv",
     "08-Flagged_Merchants/flagged_merchants.json",
     "08-Flagged_Merchants/~$flagged_merchants 2.xlsx",
@@ -196,10 +210,7 @@
     "08-Flagged_Merchants/flagged_merchants.zip",
     "08-Flagged_Merchants/README.md",
     "08-Flagged_Merchants",
-    "07-FEEDBACK-INBOX/2026-06-22.md",
     "05_HERMES_OUTPUT/merchants_may_orders_no_june_orders.csv",
-    "05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21.md",
-    "05_HERMES_OUTPUT",
     "04_SQL_Patterns/cds_cte_patterns.md",
     "07-FEEDBACK-INBOX/2026-06-20.md",
     "07-FEEDBACK-INBOX/2026-06-19.md",
@@ -209,18 +220,7 @@
     "03_Business_Logic/cds_key_descriptions.md",
     "03_Business_Logic/merchant_logic_human_oracle.md",
     "03_Business_Logic/ir_kobiraj_logic_human_oracle.md",
-    "03_Business_Logic/crm-kam-feedback-analysis.md",
     "03_Business_Logic/return-aging-logic.md",
-    "06-SYSTEM/templates/promotion-review-template.md",
-    "06-SYSTEM/templates/knowledge-candidate-template.md",
-    "06-SYSTEM/templates/exploration-report-template.md",
-    "06-SYSTEM/semantic-layer/tables/new_onboards.md",
-    "06-SYSTEM/semantic-layer/tables/crm_user_targets.md",
-    "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-validation-report.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-open-questions.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md"
+    "06-SYSTEM/templates/promotion-review-template.md"
   ]
 }
