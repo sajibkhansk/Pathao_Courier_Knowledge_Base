@@ -65,18 +65,20 @@ Current files:
 - `run_routes_transfer_basket_patterns.md` — SQL patterns for transfer runs, direct/bulk assignments, basket-contained parcels, and `Run Closed` payload count extraction.
 
 ### 05-HERMES-OUTPUTS
-Legacy analyses and outputs from earlier KB sessions. Superseded by `05_HERMES_OUTPUT/` for new observations.
-
-### 05_HERMES_OUTPUT
-Staging area for new Hermes-generated observations, draft analyses, and provisional findings. Notes here are NOT canonical — promote to `03_Business_Logic/` or `04_SQL_Patterns/` only after validation.
+Generated analysis outputs, draft investigations, and data artifacts. Notes here are NOT canonical — promote to `03_Business_Logic/` or `04_SQL_Patterns/` only after validation. All outputs go to `05-HERMES-OUTPUTS/analyses/`.
 
 Current notes:
-- [[05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21|CPO-to-LMH Routing Investigation]] — direct vs sub-sort vs no-CPO classification for Chittagong/Sylhet delivery hubs (June 2026)
+- `cpo-lmh-routing-investigation-2026-06-21.md` — CPO-to-LMH Routing Investigation (June 2026)
 
 ### 07-FEEDBACK-INBOX
 Feedback and knowledge observations pending human review. Entries are append-only and never automatically promoted to canonical knowledge.
 
 See: [[07-FEEDBACK-INBOX/_README.md|Feedback Inbox Guide]]
+
+### 09_Projects
+Structured project work — analyses, automations, investigations, and tools that produce multiple output files. One subfolder per project with its own code, data, and findings.
+
+See: [[09_Projects/README.md|Projects Index]]
 
 ### 06-SYSTEM
 System configuration, agent instructions, and the semantic layer (canonical metric/table definitions).
