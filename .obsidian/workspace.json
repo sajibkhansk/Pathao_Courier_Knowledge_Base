@@ -11,10 +11,14 @@
             "id": "b968d1f6124ba475",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "03_Business_Logic/order_status_changes_human_oracle.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "order_status_changes_human_oracle"
             }
           }
         ]
@@ -182,11 +186,25 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "03_Business_Logic/phase2_open_enum_mappings.md",
+    "03_Business_Logic/order_status_changes_human_oracle.md",
+    "03_Business_Logic/price_change_logic.md",
+    "03_Business_Logic/open_orders_business_logic.md",
+    "03_Business_Logic/ir_kobiraj_logic_human_oracle.md",
+    "03_Business_Logic/hub_facility_logic_human_oracle.md",
+    "03_Business_Logic/crm-kam-feedback-analysis.md",
+    "03_Business_Logic/crm_onboard_logic.md",
+    "03_Business_Logic/crm_merchant_attribution.md",
+    "03_Business_Logic/cds_key_descriptions.md",
+    "02_Data_Dictionary/README.md",
+    "02_Data_Dictionary/core_tables_phase2_profile.md",
+    "01_Domain_Basics/README.md",
+    "06-SYSTEM/query-standards.md",
+    "07-FEEDBACK-INBOX/2026-06-19.md",
     "_INDEX_START_HERE.md",
     "09_Projects/README.md",
     "07-FEEDBACK-INBOX/2026-06-22.md",
     "07-FEEDBACK-INBOX/2026-06-20.md",
-    "07-FEEDBACK-INBOX/2026-06-19.md",
     "07-FEEDBACK-INBOX/2026-06-18.md",
     "09_Projects",
     "05-HERMES-OUTPUTS/analyses/merchants_may_orders_no_june_orders.csv",
@@ -196,14 +214,6 @@
     "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
     "05-HERMES-OUTPUTS/analyses/hello-world.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-business-logic.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-validation-report.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-open-questions.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/proposed-system-vault-updates.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-31-mtd-business-team-performance/inspection-summary.md",
-    "03_Business_Logic/crm-kam-feedback-analysis.md",
     "08-Flagged_Merchants/flagged_merchants.csv",
     "08-Flagged_Merchants/flagged_merchants.json",
     "08-Flagged_Merchants/~$flagged_merchants 2.xlsx",
@@ -211,12 +221,6 @@
     "08-Flagged_Merchants/~$flagged_merchants.xlsx",
     "08-Flagged_Merchants/flagged_merchants_clean.csv",
     "08-Flagged_Merchants/flagged_merchants.xlsx",
-    "08-Flagged_Merchants/flagged_merchants.zip",
-    "08-Flagged_Merchants/README.md",
-    "04_SQL_Patterns/cds_cte_patterns.md",
-    "03_Business_Logic/crm_onboard_logic.md",
-    "03_Business_Logic/crm_merchant_attribution.md",
-    "03_Business_Logic/cds_key_descriptions.md",
-    "03_Business_Logic/merchant_logic_human_oracle.md"
+    "08-Flagged_Merchants/flagged_merchants.zip"
   ]
 }
