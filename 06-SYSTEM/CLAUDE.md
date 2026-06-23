@@ -23,6 +23,10 @@ When commanded to update the system layer based on a provided resource (e.g., a 
 5. **Write and Verify**: After writing, verify the changed files by reading/searching them and summarize the result.
 
 ## SQL Style & Standards
-- Exclude test merchants: `merchant_id NOT IN (1, 2, 99)`.
-- Use UTC as the default time zone. If someone explicitly requests it, convert the time to the Dhaka time zone.
-- Apply `updated_at` mainly; if not available, then apply `created_at` partition filters for BigQuery tables.
+- See `query-standards.md` for complete standards on:
+  - Merchant exclusion (`merchant_id <> 1` primary, `NOT IN (1, 2, 99)` as full exclusion)
+  - Timezone handling (UTC default)
+  - `sorted_at` for processed/sorted metrics
+  - Default date range (`updated_at > current_year - 1`)
+  - Completed deliveries
+  - Date partitioning

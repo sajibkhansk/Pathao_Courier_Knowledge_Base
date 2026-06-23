@@ -10,6 +10,7 @@ These standards ensure consistent calculation of business metrics across the Pat
 ## 2. Exclude Test Data
 - Always exclude test merchant accounts from all business metrics:
   `WHERE merchant_id NOT IN (1, 2, 99)`
+- **Primary exclusion**: `merchant_id <> 1` (R-ID / Hermes panel merchant). Merchants 2 and 99 are also test accounts and should be excluded.
 - Exclude orders with test flags if any.
 
 ## 3. Timezones
@@ -22,7 +23,17 @@ These standards ensure consistent calculation of business metrics across the Pat
 - Do not count partial deliveries as full completions.
 - Filter: `is_full_delivery = true` and `status = 'delivered'`.
 
-## 5. Date Partitioning
+## 5. Processed/Sorted Uses sorted_at
+- When the context involves "processed" or "sorted" status/deliveries, ALWAYS use `sorted_at` as the timestamp field — never `created_at`, `updated_at`, or any other timestamp.
+- This applies universally to all queries involving processed/sorted metrics, not just specific dashboards.
+
+## 6. Default Date Range
+- Always apply `updated_at > current_year - 1` as a default partition filter.
+- This covers current calendar year + previous year data.
+- Example: if current year is 2026, the filter becomes `updated_at >= '2025-01-01'`.
+- Only override this when the user explicitly specifies a different date range.
+
+## 7. Date Partitioning
 - BigQuery tables are partitioned. Always filter on `created_at` or `updated_at` (e.g. `updated_at >= '2026-06-01'`) to restrict partitions and prevent high query costs.
 
 ## Dashboard 31 Caveats: MTD Business Team Performance
