@@ -7,11 +7,10 @@ These standards ensure consistent calculation of business metrics across the Pat
 - **Secondary Source**: Use `hermes_replica` (PostgreSQL) mainly for real-time diagnostics or when explicit real-time transactional needs are specified.
 - **Sync latency**: BigQuery datastream refreshes every 2-3 hours. Keep this in mind when comparing with real-time replica numbers.
 
-## 2. Exclude Test Data
-- Always exclude test merchant accounts from all business metrics:
-  `WHERE merchant_id NOT IN (1, 2, 99)`
-- **Primary exclusion**: `merchant_id <> 1` (R-ID / Hermes panel merchant). Merchants 2 and 99 are also test accounts and should be excluded.
-- Exclude orders with test flags if any.
+## 2. Exclude R-ID Merchant
+- Always exclude the R-ID / Hermes panel merchant from all business metrics:
+  `WHERE merchant_id <> 1`
+- Do NOT exclude merchants 2 and 99 — they are not test accounts.
 
 ## 3. Timezones
 - Raw database timestamp fields are stored in UTC.

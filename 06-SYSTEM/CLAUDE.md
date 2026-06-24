@@ -31,7 +31,7 @@ When commanded to update the system layer based on a provided resource (e.g., a 
 
 ## SQL Style & Standards
 - See `query-standards.md` for complete standards on:
-  - Merchant exclusion (`merchant_id <> 1` primary, `NOT IN (1, 2, 99)` as full exclusion)
+  - Merchant exclusion (`merchant_id <> 1` — excludes R-ID/Hermes panel merchant only)
   - Timezone handling (UTC default)
   - `sorted_at` for processed/sorted metrics
   - Default date range (`updated_at > current_year - 1`)
