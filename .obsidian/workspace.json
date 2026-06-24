@@ -186,6 +186,9 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "05-HERMES-OUTPUTS/analyses/last_day_processed.xlsx",
+    "05-HERMES-OUTPUTS/analyses/c2c_pickup_hub_processed_orders_apr_jun_2026.csv",
+    "05-HERMES-OUTPUTS/analyses/c2c_delivery_hub_processed_orders_apr_jun_2026.csv",
     "outputs/c2c_3months_pickup_hub.csv",
     "outputs/c2c_3months_delivery_hub.csv",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
@@ -218,9 +221,6 @@
     "05-HERMES-OUTPUTS/analyses/merchants_may_orders_no_june_orders.csv",
     "05-HERMES-OUTPUTS/analyses/cpo-lmh-routing-investigation-2026-06-21.md",
     "08-Flagged_Merchants/flagged_merchants.csv",
-    "08-Flagged_Merchants/flagged_merchants.json",
-    "08-Flagged_Merchants/~$flagged_merchants 2.xlsx",
-    "08-Flagged_Merchants/flagged_merchants 2.xlsx",
-    "08-Flagged_Merchants/~$flagged_merchants.xlsx"
+    "08-Flagged_Merchants/flagged_merchants.json"
   ]
 }
