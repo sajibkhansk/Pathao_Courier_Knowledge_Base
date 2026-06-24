@@ -186,6 +186,7 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "outputs/last_day_processed.csv",
     "03_Business_Logic/merchant_logic_human_oracle.md",
     "03_Business_Logic/hub_facility_logic_human_oracle.md",
     "03_Business_Logic/crm-kam-feedback-analysis.md",
@@ -218,7 +219,6 @@
     "02_Data_Dictionary/core_tables_phase2_profile.md",
     "01_Domain_Basics/README.md",
     "06-SYSTEM/query-standards.md",
-    "_INDEX_START_HERE.md",
     "09_Projects",
     "05-HERMES-OUTPUTS/analyses/merchants_may_orders_no_june_orders.csv",
     "08-Flagged_Merchants/flagged_merchants.csv"
