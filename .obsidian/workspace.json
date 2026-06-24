@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Business_Logic/order_status_changes_human_oracle.md",
+                "file": "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "order_status_changes_human_oracle"
+              "title": "proposed-kb-updates"
             }
           }
         ]
@@ -186,9 +186,16 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "outputs/c2c_3months_pickup_hub.csv",
+    "outputs/c2c_3months_delivery_hub.csv",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
+    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-filter-map.md",
+    "03_Business_Logic/order_status_changes_human_oracle.md",
+    "outputs/c2c_processed_today_hub_split.csv",
+    "outputs",
     "07-FEEDBACK-INBOX/2026-06-24.md",
     "03_Business_Logic/phase2_open_enum_mappings.md",
-    "03_Business_Logic/order_status_changes_human_oracle.md",
     "03_Business_Logic/price_change_logic.md",
     "03_Business_Logic/open_orders_business_logic.md",
     "03_Business_Logic/ir_kobiraj_logic_human_oracle.md",
@@ -210,17 +217,10 @@
     "09_Projects",
     "05-HERMES-OUTPUTS/analyses/merchants_may_orders_no_june_orders.csv",
     "05-HERMES-OUTPUTS/analyses/cpo-lmh-routing-investigation-2026-06-21.md",
-    "05_HERMES_OUTPUT/cpo-lmh-routing-investigation-2026-06-21.md",
-    "06-SYSTEM/templates/new-metric-template.md",
-    "05-HERMES-OUTPUTS/analyses/naim-kpi-gaming-investigation-2026-06-19.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
     "08-Flagged_Merchants/flagged_merchants.csv",
     "08-Flagged_Merchants/flagged_merchants.json",
     "08-Flagged_Merchants/~$flagged_merchants 2.xlsx",
     "08-Flagged_Merchants/flagged_merchants 2.xlsx",
-    "08-Flagged_Merchants/~$flagged_merchants.xlsx",
-    "08-Flagged_Merchants/flagged_merchants_clean.csv",
-    "08-Flagged_Merchants/flagged_merchants.xlsx",
-    "08-Flagged_Merchants/flagged_merchants.zip"
+    "08-Flagged_Merchants/~$flagged_merchants.xlsx"
   ]
 }
