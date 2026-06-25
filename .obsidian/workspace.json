@@ -186,6 +186,7 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "05-HERMES-OUTPUTS/analyses/crm-user-performance-jun-2026.csv",
     "05-HERMES-OUTPUTS/analyses/crm_user_performance_june.xlsx",
     "05-HERMES-OUTPUTS/analyses/crm_user_performance_june.csv",
     "05-HERMES-OUTPUTS/analyses/c2c_pickup_hub_3m.xlsx",
@@ -197,7 +198,6 @@
     "06-SYSTEM/CLAUDE.md",
     "outputs/c2c_pickup_hub_3m.xlsx",
     "outputs/c2c_pickup_hub_3m.csv",
-    "outputs/c2c_delivery_hub_3m.xlsx",
     "03_Business_Logic/ir_kobiraj_logic_human_oracle.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
     "06-SYSTEM/semantic-layer/tables/business_team_targets.md",
