@@ -20,6 +20,7 @@ Processed vs open order volume definitions for merchant reporting (`on_process` 
 - Updated `03_Business_Logic/open_orders_business_logic.md` with a new Processed / Successful Orders section.
 - Updated `_INDEX_START_HERE.md` to reflect the new canonical rule.
 - Appended the corresponding feedback records in `07-FEEDBACK-INBOX/2026-06-25.md`.
+- Added `Category` guidance (`Feedback` / `New`) to the HITL knowledge-base skill and feedback capture flow.
 
 ## Files Updated Last
 
