@@ -186,6 +186,9 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
+    "05-HERMES-OUTPUTS/analyses/2026-06-25-lmh48-unassigned-isd-hubs/hub_wise_lmh_over_48_unassigned_once.csv",
+    "05-HERMES-OUTPUTS/analyses/2026-06-25-lmh48-unassigned-isd-hubs/README.md",
+    "05-HERMES-OUTPUTS/analyses/2026-06-25-lmh48-unassigned-isd-hubs",
     "07-FEEDBACK-INBOX/2026-06-25.md",
     "05-HERMES-OUTPUTS/analyses/2026-06-25-invoicing-query-review/proposed-kb-updates.md",
     "05-HERMES-OUTPUTS/analyses/2026-06-25-invoicing-query-review/README.md",
@@ -201,7 +204,6 @@
     "05-HERMES-OUTPUTS/analyses/crm-user-performance-jun-2026.csv",
     "05-HERMES-OUTPUTS/analyses/crm_user_performance_june.xlsx",
     "05-HERMES-OUTPUTS/analyses/crm_user_performance_june.csv",
-    "05-HERMES-OUTPUTS/analyses/c2c_pickup_hub_3m.xlsx",
     "06-SYSTEM/CLAUDE.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/proposed-kb-updates.md",
     "06-SYSTEM/semantic-layer/tables/business_team_targets.md",
@@ -219,8 +221,6 @@
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
     "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-filter-map.md",
-    "03_Business_Logic/order_status_changes_human_oracle.md",
-    "03_Business_Logic/phase2_open_enum_mappings.md",
-    "03_Business_Logic/price_change_logic.md"
+    "03_Business_Logic/order_status_changes_human_oracle.md"
   ]
 }
