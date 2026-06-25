@@ -5,7 +5,7 @@ Status: Phase 3 Metabase Deep Dive — Open Orders Queries collection (id=156).
 ## Open Order Status Definition
 
 Human Oracle guidance:
-- **Use `on_process` aggregation of `hermes_bz_comms.courier_transfer_status`** for open orders.
+- **Use `on_process` aggregation of `hermes_bz_comms.courier_transfer_status`** for open orders / still-processing orders.
 - Do not use hardcoded transfer_status_id lists.
 
 SQL-generation rule:
@@ -16,6 +16,24 @@ FROM courier_realtime_datastream.public_orders o
 JOIN hermes_bz_comms.courier_transfer_status ts
   ON o.transfer_status_id = ts.transfer_status_id
 WHERE ts.on_process = 1
+  AND o.country_id = 1
+```
+
+## Processed / Successful Orders
+
+Human Oracle guidance:
+- **Use `is_processed = 1`** when the reporting goal is successful / processed volume.
+- Do not use `on_process` for completed-volume reporting.
+- Merchant-cancelled orders after creation should not be counted as successful/processed volume.
+
+SQL-generation rule:
+
+```sql
+SELECT o.consignment_id, ...
+FROM courier_realtime_datastream.public_orders o
+JOIN hermes_bz_comms.courier_transfer_status ts
+  ON o.transfer_status_id = ts.transfer_status_id
+WHERE ts.is_processed = 1
   AND o.country_id = 1
 ```
 
