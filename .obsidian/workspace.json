@@ -11,10 +11,14 @@
             "id": "b968d1f6124ba475",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "07-FEEDBACK-INBOX/2026-06-27.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-27"
             }
           }
         ]
@@ -182,8 +186,12 @@
   },
   "active": "b968d1f6124ba475",
   "lastOpenFiles": [
-    "07-FEEDBACK-INBOX/2026-06-27.md",
     "07-FEEDBACK-INBOX/2026-06-26.md",
+    "07-FEEDBACK-INBOX/2026-06-27.md",
+    "09_Projects/README.md",
+    "_INDEX_START_HERE.md",
+    "00_STRUCTURE_AUDIT.md",
+    "00_WORKING_STATE.md",
     "07-FEEDBACK-INBOX/2026-06-25.md",
     "05-HERMES-OUTPUTS/analyses/2026-06-25-lmh48-unassigned-isd-hubs/hub_wise_lmh_over_48_unassigned_once.csv",
     "05-HERMES-OUTPUTS/analyses/2026-06-25-lmh48-unassigned-isd-hubs/README.md",
@@ -212,11 +220,7 @@
     "03_Business_Logic/crm-kam-feedback-analysis.md",
     "06-SYSTEM/feedback-log.md",
     "07-FEEDBACK-INBOX/2026-06-18.md",
-    "00_WORKING_STATE.md",
     "07-FEEDBACK-INBOX/2026-06-19.md",
-    "03_Business_Logic/cds_key_descriptions.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-table-field-map.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-inventory.md",
-    "05-HERMES-OUTPUTS/analyses/dashboard-154-crm-managers-dashboard/dashboard-154-filter-map.md"
+    "03_Business_Logic/cds_key_descriptions.md"
   ]
 }
