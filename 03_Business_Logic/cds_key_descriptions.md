@@ -9,6 +9,10 @@ Source:
 - Retrieved count: 33 snippets
 - Categories found: `CTE's`, `Key's Description`, `Case Functions`
 
+Terminology distinction:
+- This file documents CDS **SQL snippet/key-description** knowledge for Courier analytics.
+- For CDS as Pathao's task-management platform, use [[03_Business_Logic/cds_task_management_logic]] and [[02_Data_Dictionary/cds_public_requests]].
+
 SQL-generation rule:
 - For enum/key mappings, check this CDS snippet source before asking the Human Oracle.
 - If a mapping is incomplete or ambiguous in CDS, ask a focused follow-up.

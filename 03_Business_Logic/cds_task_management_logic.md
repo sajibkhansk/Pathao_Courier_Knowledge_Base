@@ -107,5 +107,7 @@ AND status IN ('To Do', 'In Progress', 'Blocker')
 
 ## Related
 
+- [[02_Data_Dictionary/cds_public_requests]] — table grain and field meanings for direct CDS task reporting.
+- [[04_SQL_Patterns/cds_task_management_reporting_patterns]] — reusable SQL filters and summary query patterns for CDS task-management reports.
 - [[03_Business_Logic/cds_key_descriptions]] — CDS SQL snippet enum/key descriptions; separate from task-management CDS context.
-- [[04_SQL_Patterns/cds_cte_patterns]] — reusable Courier SQL CTE patterns extracted from CDS snippets.
+- [[04_SQL_Patterns/cds_cte_patterns]] — reusable Courier SQL CTE patterns extracted from CDS snippets; separate from task-management CDS context.

@@ -28,6 +28,7 @@ Use for table/column-level documentation: primary keys, important columns, JSON 
 Current files:
 - `README.md` — folder purpose.
 - `core_tables_phase2_profile.md` — initial profiles for `public_orders`, `public_order_status_changes`, `public_run_routes`, `public_run_routes_orders`, `public_hubs`, and supporting `public_merchants`.
+- `cds_public_requests.md` — primary CDS task-management table (`public.requests`) with grain, key fields, observed statuses, and dashboard-aligned unassigned rule.
 - `cds_sql_snippets_raw.json` — raw export from CDS `/api/sql-snippets`; do not treat as polished docs, use it as source evidence.
 
 ### 03_Business_Logic
@@ -57,12 +58,13 @@ Current files:
 ### 04_SQL_Patterns
 Use for reusable SQL snippets and implementation details: partition elimination, timezone handling, date windows, dedupe patterns, Metabase parameter conventions.
 
-Key notes: [[04_SQL_Patterns/cds_cte_patterns.md|cds_cte_patterns]] (reusable CTEs), [[04_SQL_Patterns/phase2_initial_table_patterns.md|initial table patterns]], [[04_SQL_Patterns/run_routes_transfer_basket_patterns.md|run routes patterns]].
+Key notes: [[04_SQL_Patterns/cds_task_management_reporting_patterns.md|CDS task-management reporting patterns]], [[04_SQL_Patterns/cds_cte_patterns.md|cds_cte_patterns]] (reusable CTEs), [[04_SQL_Patterns/phase2_initial_table_patterns.md|initial table patterns]], [[04_SQL_Patterns/run_routes_transfer_basket_patterns.md|run routes patterns]].
 
 Current files:
 - `README.md` — folder purpose.
 - `phase2_initial_table_patterns.md` — initial datastream partition, order filter, return/reverse grain, and event timestamp patterns.
 - `cds_cte_patterns.md` — reusable CDS CTE snippets for orders, merchants, hubs, invoices, payments, regions/zones/stores, merchant users, and wallet info.
+- `cds_task_management_reporting_patterns.md` — reusable direct-DB SQL patterns for CDS task-management weekly/overall/long-open reporting.
 - `run_routes_transfer_basket_patterns.md` — SQL patterns for transfer runs, direct/bulk assignments, basket-contained parcels, and `Run Closed` payload count extraction.
 
 ### 05-HERMES-OUTPUTS

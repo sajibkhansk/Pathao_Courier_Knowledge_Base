@@ -7,6 +7,10 @@ Source:
 - Retrieved count: 33 snippets
 - Relevant CDS category: `CTE's`
 
+Terminology distinction:
+- This file documents CDS **SQL snippet CTE patterns** for Courier analytics.
+- For CDS as Pathao's task-management platform, use [[03_Business_Logic/cds_task_management_logic]], [[02_Data_Dictionary/cds_public_requests]], and [[04_SQL_Patterns/cds_task_management_reporting_patterns]].
+
 SQL-generation rule:
 - Before writing new base CTEs for common Pathao Courier entities, check these CDS snippets.
 - Prefer `courier_realtime_datastream` for stakeholder-facing reporting when a datastream table exists.
