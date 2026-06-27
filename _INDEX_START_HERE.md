@@ -33,7 +33,7 @@ Current files:
 ### 03_Business_Logic
 Use for reusable rules: status ID meanings, hub type mappings, exclusion rules, magic numbers, operational cutoffs, team/merchant identifiers.
 
-Key notes: [[03_Business_Logic/cds_key_descriptions.md|cds_key_descriptions]] (enum mappings), [[03_Business_Logic/order_status_changes_human_oracle.md|OSC oracle]], [[03_Business_Logic/merchant_logic_human_oracle.md|merchant logic]], [[03_Business_Logic/hub_facility_logic_human_oracle.md|hub facility logic]], [[03_Business_Logic/ir_kobiraj_logic_human_oracle.md|IR/Kobiraj logic]], [[03_Business_Logic/open_orders_business_logic.md|open orders]], [[03_Business_Logic/price_change_logic.md|price change]], [[03_Business_Logic/return_revamp_logic.md|return revamp]], [[03_Business_Logic/run_routes_human_oracle.md|run routes]], [[03_Business_Logic/order_fields_human_oracle.md|order fields]], [[03_Business_Logic/phase2_open_enum_mappings.md|open enum mappings]].
+Key notes: [[03_Business_Logic/cds_key_descriptions.md|cds_key_descriptions]] (enum mappings), [[03_Business_Logic/cds_task_management_logic.md|CDS task management]], [[03_Business_Logic/order_status_changes_human_oracle.md|OSC oracle]], [[03_Business_Logic/merchant_logic_human_oracle.md|merchant logic]], [[03_Business_Logic/hub_facility_logic_human_oracle.md|hub facility logic]], [[03_Business_Logic/ir_kobiraj_logic_human_oracle.md|IR/Kobiraj logic]], [[03_Business_Logic/open_orders_business_logic.md|open orders]], [[03_Business_Logic/price_change_logic.md|price change]], [[03_Business_Logic/return_revamp_logic.md|return revamp]], [[03_Business_Logic/run_routes_human_oracle.md|run routes]], [[03_Business_Logic/order_fields_human_oracle.md|order fields]], [[03_Business_Logic/phase2_open_enum_mappings.md|open enum mappings]].
 
 Current files:
 - `README.md` — folder purpose.
@@ -52,6 +52,7 @@ Current files:
 - `price_change_logic.md` — Price Change / COD Reduction logic from Phase 3: use OSC logs for collectable amount changes, merchant OTP meaning, tunable flagging thresholds, delivered vs exchange inclusion, and observed Price Change card catalog.
 - `crm-kam-feedback-analysis.md` — KAM feedback analysis rules: `detailed_response` is primary analytical field, dashboard naming (Monthly KAM Feedback = Monthly Merchant Feedback id 191), data quality warning (63% dissatisfaction_reason_id = 40 unresolvable).
 - `return-aging-logic.md` — Return aging calculation from Card #1360: start (created_at/sorted_at/lmh_at) → end (transfer_status_updated_at), DATE_DIFF in whole days, statuses 21/35 only, UNION ALL live+archive requirement.
+- `cds_task_management_logic.md` — CDS task-management platform meaning, direct `public.requests` reporting source, dashboard-aligned open/closed/unassigned definitions, and CDS Summary rules.
 
 ### 04_SQL_Patterns
 Use for reusable SQL snippets and implementation details: partition elimination, timezone handling, date windows, dedupe patterns, Metabase parameter conventions.

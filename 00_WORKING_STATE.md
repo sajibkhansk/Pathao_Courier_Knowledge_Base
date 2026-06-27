@@ -6,27 +6,26 @@ Persistent state file for the Pathao Courier HITL Markdown knowledge-base proces
 
 ## Current Phase
 
-Phase 3: Metabase Deep Dive — Dashboard 154 CRM Managers Dashboard (promoted)
+Phase 3: Feedback promotion / CDS task-management logic
 
 ## Current Topic
 
-Processed vs open order volume definitions for merchant reporting (`on_process` vs `is_processed`), plus monthly merchant volume exclusion of cancelled orders.
+CDS task-management platform meaning and dashboard-aligned unassigned task-count logic.
 
 ## Last Completed
 
-- Promoted two user-approved feedback items into canonical business logic:
-  - merchant monthly volume should exclude merchant-cancelled orders after creation
-  - successful / processed merchant volume should use `hermes_bz_comms.courier_transfer_status.is_processed = 1`, not `on_process`
-- Updated `03_Business_Logic/open_orders_business_logic.md` with a new Processed / Successful Orders section.
-- Updated `_INDEX_START_HERE.md` to reflect the new canonical rule.
-- Appended the corresponding feedback records in `07-FEEDBACK-INBOX/2026-06-25.md`.
-- Added `Category` guidance (`Feedback` / `New`) to the HITL knowledge-base skill and feedback capture flow.
+- 2026-06-27: Promoted two user-approved feedback entries from `07-FEEDBACK-INBOX/2026-06-27.md`:
+  - `04:06 - CDS means task-management platform`
+  - `12:26 - CDS dashboard-aligned unassigned count`
+- Created canonical CDS task-management logic note.
+- Updated index to include the new canonical note.
+- Marked the two feedback records as `promoted` with destination and promotion date.
 
 ## Files Updated Last
 
-- `03_Business_Logic/open_orders_business_logic.md` — added Processed / Successful Orders logic using `is_processed = 1`.
-- `_INDEX_START_HERE.md` — updated open-orders note to mention `is_processed` for successful volume.
-- `07-FEEDBACK-INBOX/2026-06-25.md` — appended the two approved feedback entries.
+- `03_Business_Logic/cds_task_management_logic.md` — created canonical CDS task-management platform and unassigned-count logic.
+- `_INDEX_START_HERE.md` — added the CDS task-management canonical note to the 03_Business_Logic map.
+- `07-FEEDBACK-INBOX/2026-06-27.md` — marked the two requested entries as promoted.
 - `00_WORKING_STATE.md` — updated this state.
 
 ## Pending Open Questions
@@ -35,13 +34,13 @@ Processed vs open order volume definitions for merchant reporting (`on_process` 
 
 ## Next Action For Agent
 
-1. Continue with the current user task using the updated merchant-volume logic.
-2. When monthly merchant ranking is needed, use `is_processed = 1` and exclude merchant-cancelled orders.
-3. Keep documenting any new reusable merchant/reporting rules in the KB.
+1. Use `03_Business_Logic/cds_task_management_logic.md` for CDS task-management reporting.
+2. For dashboard-aligned CDS Unassigned, use `assigned_data_team_user IS NULL AND status IN ('To Do', 'In Progress', 'Blocker')`.
+3. Keep raw null-assignment counts separate from dashboard-aligned unassigned counts.
 
 ## Next Question Batch
 
-- None. The user asked to promote these two feedback items, and that has been completed.
+- None.
 
 ## Guardrails
 
