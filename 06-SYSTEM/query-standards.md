@@ -7,10 +7,15 @@ These standards ensure consistent calculation of business metrics across the Pat
 - **Secondary Source**: Use `hermes_replica` (PostgreSQL) mainly for real-time diagnostics or when explicit real-time transactional needs are specified.
 - **Sync latency**: BigQuery datastream refreshes every 2-3 hours. Keep this in mind when comparing with real-time replica numbers.
 
-## 2. Exclude R-ID Merchant
+## 2. Standard Courier Business Filters
+- **Important:** All Pathao Courier query results and returned SQL should include Bangladesh country filtering by default:
+  `country_id = 1`
 - Always exclude the R-ID / Hermes panel merchant from all business metrics:
-  `WHERE merchant_id <> 1`
+  `merchant_id <> 1`
+- Standard default business filter for courier order counts:
+  `country_id = 1 AND merchant_id <> 1`
 - Do NOT exclude merchants 2 and 99 — they are not test accounts.
+- Only omit `country_id = 1` when the user explicitly asks for all-country/global data or a non-Bangladesh country scope.
 
 ## 3. Timezones
 - Raw database timestamp fields are stored in UTC.

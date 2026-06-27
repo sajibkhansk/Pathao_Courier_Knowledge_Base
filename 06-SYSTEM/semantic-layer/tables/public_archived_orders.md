@@ -23,8 +23,9 @@ WITH orders AS (
 
 ## Dashboard 31 Gotchas
 
+- **Important default country filter**: For all Pathao Courier order results and returned SQL, include `country_id = 1` by default unless the user explicitly asks for all-country/global data or another country scope.
+- Standard default business filter: `country_id = 1 AND merchant_id <> 1`.
 - Dashboard 31 uses `merchant_id <> 1` for this process.
-- Dashboard 31 usually filters `country_id = 1`.
 - Use date predicates on `sorted_at`, `created_at`, or `updated_at` depending on metric context.
 
 ## Related Notes

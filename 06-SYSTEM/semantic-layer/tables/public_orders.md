@@ -101,8 +101,9 @@ transfer_status_id IN (8,9,10,11,12,13,22,23,24,26,28,25,14,30,31,32,33,36,37,38
 
 ## Gotchas & Data Traps
 
+- **Important default country filter**: For all Pathao Courier order results and returned SQL, include `country_id = 1` by default unless the user explicitly asks for all-country/global data or another country scope.
 - **Dashboard 31 merchant filter**: Use `merchant_id <> 1` for this process when reproducing Dashboard 31, per business confirmation.
-- **General default**: Use `merchant_id <> 1` to exclude the R-ID/Hermes panel merchant. Do NOT exclude merchants 2 or 99.
+- **General default business filter**: Use `country_id = 1 AND merchant_id <> 1` to keep Bangladesh courier orders and exclude the R-ID/Hermes panel merchant. Do NOT exclude merchants 2 or 99.
 - **Active + archived**: Dashboard 31 often requires `public_orders UNION ALL public_archived_orders`; querying only `public_orders` can undercount MTD/historical metrics.
 - **Date field differs by metric**: Most processed/revenue/forecasting cards use `sorted_at`; Retail/Point/Booking Point cards may use `created_at`.
 - **Timestamps**: Raw timestamps are UTC. Use Asia/Dhaka for business-day context when required.
