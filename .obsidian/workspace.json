@@ -181,8 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b968d1f6124ba475",
+  "active": "4ca02b6dd203403a",
   "lastOpenFiles": [
+    "07-FEEDBACK-INBOX/2026-06-28.md",
+    "04_SQL_Patterns/cds_task_management_reporting_patterns.md",
+    "02_Data_Dictionary/cds_public_requests.md",
     "03_Business_Logic/cds_task_management_logic.md",
     "07-FEEDBACK-INBOX/2026-06-27.md",
     "07-FEEDBACK-INBOX/2026-06-26.md",
@@ -215,9 +218,6 @@
     "06-SYSTEM/query-standards.md",
     "03_Business_Logic/merchant_logic_human_oracle.md",
     "03_Business_Logic/hub_facility_logic_human_oracle.md",
-    "03_Business_Logic/crm-kam-feedback-analysis.md",
-    "06-SYSTEM/feedback-log.md",
-    "07-FEEDBACK-INBOX/2026-06-18.md",
-    "07-FEEDBACK-INBOX/2026-06-19.md"
+    "03_Business_Logic/crm-kam-feedback-analysis.md"
   ]
 }
