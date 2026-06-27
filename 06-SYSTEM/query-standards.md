@@ -14,8 +14,10 @@ These standards ensure consistent calculation of business metrics across the Pat
 
 ## 3. Timezones
 - Raw database timestamp fields are stored in UTC.
-- Use UTC for both filters and output columns by default.
-- Only apply Asia/Dhaka timezone conversion when the user explicitly requests it.
+- Use UTC / default database time for both filters and output columns by default.
+- This default applies globally for all users and channels; do not infer SQL/reporting timezone from WhatsApp, user profile, user location, or local machine timezone.
+- Only apply Asia/Dhaka / Bangladesh / BD timezone conversion when the user explicitly requests it in the current ask.
+- For phrases like `today`, `so far`, `current day`, or `same day`, use UTC/default database day unless the user explicitly says BD/Bangladesh/Asia-Dhaka.
 - Do not convert filters to Dhaka unless asked — contradicts the no-conversion default.
 
 ## 4. Completed Deliveries
